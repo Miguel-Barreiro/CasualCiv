@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 5ff48f4de6644086836bbe67b9cb69aa
+timeCreated: 1697401578
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282620
+  packageName: Easy Workspace
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyWorkspace/Core/Editor/Scripts/Core/EWInitializationScreen.cs
+  uploadId: 786306

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 6bb4ead01ea748278f8bc0448402d6d3
+timeCreated: 1702328101
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282620
+  packageName: Easy Workspace
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyWorkspace/Core/Editor/Scripts/SO/EWContainer.cs
+  uploadId: 786306

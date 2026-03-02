@@ -1,0 +1,30 @@
+.panel-default {
+    background-color: rgb(5, 5, 5);
+    overflow: hidden;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+}
+
+.panel-hover {
+    border-left-color: rgb(35, 37, 41);
+    border-right-color: rgb(35, 37, 41);
+    border-top-color: rgb(35, 37, 41);
+    border-bottom-color: rgb(35, 37, 41);
+}
+
+.panel-selected {
+    border-left-color: rgb(70, 74, 82);
+    border-right-color: rgb(70, 74, 82);
+    border-top-color: rgb(70, 74, 82);
+    border-bottom-color: rgb(70, 74, 82);
+}

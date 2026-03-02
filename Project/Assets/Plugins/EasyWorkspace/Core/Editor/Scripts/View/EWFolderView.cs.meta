@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e2e8556d38d464f6e8fb0c11aa0b6c91
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282620
+  packageName: Easy Workspace
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyWorkspace/Core/Editor/Scripts/View/EWFolderView.cs
+  uploadId: 786306

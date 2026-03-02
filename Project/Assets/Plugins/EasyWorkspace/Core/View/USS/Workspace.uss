@@ -1,0 +1,36 @@
+.inspector-inactive {
+    width: 200px;
+    opacity: 0;
+    left: -200px;
+    position: absolute;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out-circ;
+    height: auto;
+}
+
+.inspector-active {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+}
+
+.toolbar {
+    background-color: rgb(5, 5, 5);
+}
+
+ToolbarButton {
+    background-color: rgb(5, 5, 5);
+    -unity-font-definition: initial;
+    margin-right: -1px;
+    -unity-background-image-tint-color: rgb(196, 196, 196);
+    flex-shrink: 0;
+    -unity-text-align: middle-center;
+}
+
+ToolbarButton:hover {
+    background-color: rgb(30, 30, 30);
+}
+
+ToolbarButton:active {
+    background-color: rgb(50, 50, 50);
+}

@@ -1,0 +1,23 @@
+.workspace-tab {
+    background-color: rgb(5, 5, 5);
+}
+
+.workspace-tab:hover {
+    background-color: rgb(30, 30, 30);
+}
+
+.workspace-tab:active {
+    background-color: rgb(50, 50, 50);
+}
+
+.button-close-normal:inactive {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.button-close-hover:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.workspace-tab-active {
+    background-color: rgb(31, 31, 31);
+}

@@ -1,0 +1,13 @@
+{
+    "name": "com.calcatz.anyobjectfinder",
+    "displayName": "Any Object Finder",
+    "version": "1.0.2",
+    "unity": "2019.4",
+    "description": "Find any object derived from UnityEngine.Object in scenes and assets.",
+    "keywords": [
+        "object",
+	"search",
+        "find"
+    ],
+    "category": "Unity"
+}

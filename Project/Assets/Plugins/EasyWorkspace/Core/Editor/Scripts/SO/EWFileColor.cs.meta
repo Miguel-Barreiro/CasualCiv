@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 410396d96d9f40e09bd92682cf552588
+timeCreated: 1711065172
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282620
+  packageName: Easy Workspace
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyWorkspace/Core/Editor/Scripts/SO/EWFileColor.cs
+  uploadId: 786306

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fdc7f22dff37c594eb1907a57f867b56
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286455
+  packageName: Any Object Finder
+  packageVersion: 1.0.2
+  assetPath: Assets/Calcatz/AnyObjectFinder/Scripts/UI/TypeSelectionWindow.cs
+  uploadId: 864290

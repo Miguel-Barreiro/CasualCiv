@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 6b475666004742ceb19623d78616b63e
+timeCreated: 1687298458
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282620
+  packageName: Easy Workspace
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyWorkspace/Core/Editor/Scripts/UIElements/EWResizableElement.cs
+  uploadId: 786306

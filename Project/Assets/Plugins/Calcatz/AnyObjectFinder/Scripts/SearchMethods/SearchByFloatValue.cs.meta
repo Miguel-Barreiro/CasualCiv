@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fbf543d20fcaab24898b585e6a26261e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286455
+  packageName: Any Object Finder
+  packageVersion: 1.0.2
+  assetPath: Assets/Calcatz/AnyObjectFinder/Scripts/SearchMethods/SearchByFloatValue.cs
+  uploadId: 864290

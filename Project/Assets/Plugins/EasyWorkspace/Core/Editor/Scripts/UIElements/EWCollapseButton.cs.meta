@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: db5335e3199b4bae94ac49288144148f
+timeCreated: 1703196619
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282620
+  packageName: Easy Workspace
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyWorkspace/Core/Editor/Scripts/UIElements/EWCollapseButton.cs
+  uploadId: 786306

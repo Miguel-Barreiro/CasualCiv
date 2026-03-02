@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 8c773aae37d043229583a55c61b0dac3
+timeCreated: 1710885693
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282620
+  packageName: Easy Workspace
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyWorkspace/Core/Editor/Scripts/SO/EWFileColorContainer.cs
+  uploadId: 786306

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 26cf9bd33ed941fa88f4cd462b8e68b7
+timeCreated: 1726186790
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282620
+  packageName: Easy Workspace
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyWorkspace/Core/Editor/Scripts/Core/EWAssetActionType.cs
+  uploadId: 786306

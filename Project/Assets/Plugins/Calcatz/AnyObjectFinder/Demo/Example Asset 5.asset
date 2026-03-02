@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0236297d069628244bf891ecb1c8f573, type: 3}
+  m_Name: Example Asset 5
+  m_EditorClassIdentifier: 
+  stringVal: Amet
+  intVal: 40
+  floatVal: 0.4
+  boolVal: 0
+  enumVal: 1
+  texture2DRef: {fileID: 0}
+  audioClipRef: {fileID: 0}
+  nestedExample:
+    string2Val: 
+    int2Val: 555
+    float2Val: 5000
+  structExample: {x: 0, y: 0, z: 0}
+  stringArray: []

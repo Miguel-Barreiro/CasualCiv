@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2b054074f08c1934ea43549d3bdfa4b0
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286455
+  packageName: Any Object Finder
+  packageVersion: 1.0.2
+  assetPath: Assets/Calcatz/AnyObjectFinder/Demo/Scripts/Calcatz.AnyObjectFinder.Demo.asmdef
+  uploadId: 864290

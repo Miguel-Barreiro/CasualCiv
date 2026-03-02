@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: c521b7b38d5d449babd38b6a6fccc344
+timeCreated: 1724974239
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282620
+  packageName: Easy Workspace
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyWorkspace/Core/Editor/Scripts/Core/EWBackup.cs
+  uploadId: 786306

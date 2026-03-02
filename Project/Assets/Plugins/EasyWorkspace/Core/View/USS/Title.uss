@@ -1,0 +1,16 @@
+.title-default {
+    -unity-text-align: middle-center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    flex-grow: 0;
+    height: 27px;
+    -unity-font: url("project://database/Assets/EasyWorkspace/Core/View/SofiaSans-Medium.ttf?fileID=12800000&guid=58a28a00760944927912cb7f5c7d37db&type=3#SofiaSans-Medium");
+    -unity-font-definition: initial;
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+}

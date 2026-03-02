@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: e18d23509e15439990bd0d307f6663cc
+timeCreated: 1712526836
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282620
+  packageName: Easy Workspace
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyWorkspace/Core/Editor/Scripts/Attributes/EWResizableAttribute.cs
+  uploadId: 786306

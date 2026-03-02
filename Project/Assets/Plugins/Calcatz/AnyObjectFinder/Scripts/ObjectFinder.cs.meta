@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: eef4b1432fe66274dabad6f50f43ed36
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286455
+  packageName: Any Object Finder
+  packageVersion: 1.0.2
+  assetPath: Assets/Calcatz/AnyObjectFinder/Scripts/ObjectFinder.cs
+  uploadId: 864290

@@ -1,0 +1,29 @@
+ToolbarSearchField {
+    background-color: rgb(29, 30, 33);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    height: 24px;
+    width: auto;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+ToolbarSearchField > #unity-search {
+    margin-left: 4px;
+}
+
+ToolbarSearchField > TextField > TextInput {
+    background-color: rgb(29, 30, 33);
+}

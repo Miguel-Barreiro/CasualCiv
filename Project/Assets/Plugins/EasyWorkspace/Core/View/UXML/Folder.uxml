@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/EasyWorkspace/Core/View/USS/Panel.uss?fileID=7433441132597879392&amp;guid=c26ff3d43f09b40459aaa5fa61ff0d28&amp;type=3#Panel" />
+    <Style src="project://database/Assets/EasyWorkspace/Core/View/USS/Toolbar.uss?fileID=7433441132597879392&amp;guid=9fe8b9eaaae2c4990836d1e04bd4fca7&amp;type=3#Toolbar" />
+    <Style src="project://database/Assets/EasyWorkspace/Core/View/USS/Title.uss?fileID=7433441132597879392&amp;guid=5979941d621274c79bd97d8419604ab3&amp;type=3#Title" />
+    <Style src="project://database/Assets/EasyWorkspace/Core/View/USS/FileDefault.uss?fileID=7433441132597879392&amp;guid=70ee1f046cfe7460894e339c4f47e267&amp;type=3#FileDefault" />
+    <Style src="project://database/Assets/EasyWorkspace/Core/View/USS/DropIndicator.uss?fileID=7433441132597879392&amp;guid=b3e51963d8ef64ba88940e40485ba91c&amp;type=3#DropIndicator" />
+    <Style src="project://database/Assets/EasyWorkspace/Core/View/USS/Search.uss?fileID=7433441132597879392&amp;guid=4fd9a46f320b54861a94f813d51c6da1&amp;type=3#Search" />
+    <Style src="project://database/Assets/EasyWorkspace/Core/View/USS/ScrollView.uss?fileID=7433441132597879392&amp;guid=73f19b6ec9cb14a7a96feae5c211f5fd&amp;type=3#ScrollView" />
+    <ui:VisualElement name="Panel" class="panel-default">
+        <ui:VisualElement name="Toolbar" class="toolbar-default" style="height: 57px; flex-shrink: 0;">
+            <ui:Label text="Title" name="Title" class="title-default" style="padding-right: 45px; padding-left: 45px;">
+                <ui:VisualElement name="ModeSwitch" style="width: 36px; height: 15px; flex-direction: row; position: absolute; overflow: hidden; left: 9px; align-items: center; justify-content: space-between;">
+                    <ui:VisualElement name="Indicator" style="flex-grow: 1; position: absolute; width: 12px; height: 12px; background-color: rgb(115, 115, 115); transition-duration: 0.2s; border-top-left-radius: 2.25px; border-top-right-radius: 2.25px; border-bottom-right-radius: 2.25px; border-bottom-left-radius: 2.25px; display: none;" />
+                    <ui:VisualElement name="IconLine" style="background-image: url(&quot;project://database/Assets/EasyWorkspace/Core/Icons/EW_List.png?fileID=2800000&amp;guid=033d1a54f6b374540b576ee32dc0fa5b&amp;type=3#EW_List&quot;); width: 15px; height: 15px; transition-duration: 0.2s; -unity-background-scale-mode: scale-to-fit; -unity-slice-left: 1; -unity-slice-top: 1; -unity-slice-right: 1; -unity-slice-bottom: 1;" />
+                    <ui:VisualElement name="IconGrid" style="background-image: url(&quot;project://database/Assets/EasyWorkspace/Core/Icons/EW_Grid.png?fileID=2800000&amp;guid=707ff4f8331814654b6002f85451c2a5&amp;type=3#EW_Grid&quot;); width: 15px; height: 15px; transition-duration: 0.2s; -unity-slice-left: 1; -unity-slice-top: 1; -unity-slice-right: 1; -unity-slice-bottom: 1; -unity-background-scale-mode: scale-to-fit;" />
+                </ui:VisualElement>
+            </ui:Label>
+            <ui:VisualElement name="ToolbarLineContainer" style="flex-grow: 1;">
+                <uie:ToolbarSearchField name="Search" style="height: 18px;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Info" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CollapsedInfo" picking-mode="Ignore" style="position: absolute; top: 25px; left: 0; right: 0; -unity-text-align: upper-center; flex-grow: 1; bottom: 0; font-size: 8px;" />
+            <EasyWorkspace.EWCollapseButton name="Collapse" style="position: absolute; top: 2.5px; right: 5px; background-image: url(&quot;project://database/Assets/EasyWorkspace/Core/Icons/EW_Arrow.png?fileID=2800000&amp;guid=165a9c45ee8874ddfacd8baea927a895&amp;type=3#EW_Arrow&quot;);" />
+        </ui:VisualElement>
+        <ui:ScrollView nested-interaction-kind="StopScrolling" horizontal-scroller-visibility="Hidden" name="ScrollView" style="flex-grow: 1;" />
+        <ui:VisualElement name="DropIndicator" picking-mode="Ignore" style="position: absolute; left: 9px; top: 69px; right: 9px; bottom: 9px;">
+            <ui:Label text="Drop files to add" name="Text" picking-mode="Ignore" style="-unity-font: url(&quot;project://database/Assets/EasyWorkspace/Core/View/SofiaSans-Medium.ttf?fileID=12800000&amp;guid=58a28a00760944927912cb7f5c7d37db&amp;type=3#SofiaSans-Medium&quot;); -unity-font-definition: initial;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

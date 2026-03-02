@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 641d459308ca4943be461812cf5f72c7
+timeCreated: 1699999226
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282620
+  packageName: Easy Workspace
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyWorkspace/Core/Editor/Scripts/Core/EWNote.cs
+  uploadId: 786306

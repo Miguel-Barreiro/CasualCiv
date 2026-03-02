@@ -1,0 +1,7 @@
+#ModeSwitch #IconLine {
+    -unity-background-image-tint-color: white;
+}
+
+#ModeSwitch #IconGrid {
+    -unity-background-image-tint-color: #F9D84A;
+}

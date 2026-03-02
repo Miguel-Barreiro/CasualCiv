@@ -1,0 +1,10 @@
+v1.0.2:
+- Adjusted obsolete methods
+- Fixed where GameObject name and/or tag search result listed twice when searching By SerializedObject
+
+v1.0.1
+- Fixed folder selection tree toggle visual
+- Added error exception for unloadable assets
+
+v1.0.0:
+- First Release
