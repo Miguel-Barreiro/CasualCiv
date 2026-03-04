@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750e1ee7e136424297ef390ffa1a2f0b, type: 3}
+  m_Name: shortcuts
+  m_EditorClassIdentifier: Assembly-CSharp-Editor-firstpass::EasyWorkspace.EWWorkspace
+  _files:
+  - {fileID: 7579015833728805574}
+  _position: {x: 0, y: 0, z: 0}
+  _zoom: {x: 1, y: 1, z: 1}
+  _added: 1
+  _opened: 1
+  _order: 2
+--- !u!114 &7579015833728805574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e406c6667bd24f389be0f814c3ff2862, type: 3}
+  m_Name: EWFolder
+  m_EditorClassIdentifier: Assembly-CSharp-Editor-firstpass::EasyWorkspace.EWFolder
+  _title: 
+  _position: {x: 5.333336, y: 144.16667, z: 0}
+  _size: {x: 200, y: 65, z: 0}
+  _collapsed: 0
+  _color: Default
+  _assets: []
+  _assetScale: 0
+  _folderType: 0
+  _directories: []
+  _sortByName: 0
+  _sortByType: 1
+  _deepSearch: 0
+  _filter: -1
+  _searchFilter: 
+  _scrollPosition: {x: 0, y: 0}
+  _directoriesFoldout: 1

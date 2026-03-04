@@ -38,7 +38,7 @@ MonoBehaviour:
   _position: {x: 0, y: 0, z: 0}
   _zoom: {x: 1, y: 1, z: 1}
   _added: 1
-  _opened: 1
+  _opened: 0
   _order: 1
 --- !u!114 &7045335709650837853
 MonoBehaviour:
