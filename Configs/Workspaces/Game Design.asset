@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750e1ee7e136424297ef390ffa1a2f0b, type: 3}
+  m_Name: Game Design
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::EasyWorkspace.EWWorkspace
+  _files:
+  - {fileID: 370427165473152962}
+  _position: {x: 0, y: 0, z: 0}
+  _zoom: {x: 1, y: 1, z: 1}
+  _added: 1
+  _opened: 0
+  _order: 0
+--- !u!114 &370427165473152962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d0c28417ec4139bfe3ce01e567abd3, type: 3}
+  m_Name: EWAsset
+  m_EditorClassIdentifier: Assembly-CSharp-Editor-firstpass::EasyWorkspace.EWAsset
+  _title: 
+  _position: {x: 38.333336, y: 81.83334, z: 0}
+  _size: {x: 90, y: 115, z: 0}
+  _collapsed: 0
+  _color: Default
+  _asset: {fileID: 11400000, guid: 0f02757a7b4ec11489a3abe441ae7a3f, type: 2}
+  _styleIndex: 0

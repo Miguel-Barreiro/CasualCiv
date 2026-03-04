@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4764515307580112959
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d0c28417ec4139bfe3ce01e567abd3, type: 3}
+  m_Name: EWAsset
+  m_EditorClassIdentifier: Assembly-CSharp-Editor-firstpass::EasyWorkspace.EWAsset
+  _title: 
+  _position: {x: 358, y: 221.44, z: 0}
+  _size: {x: 90, y: 115, z: 0}
+  _collapsed: 0
+  _color: Default
+  _asset: {fileID: 11400000, guid: bc547e661eb0a3644b546c556e212815, type: 2}
+  _styleIndex: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750e1ee7e136424297ef390ffa1a2f0b, type: 3}
+  m_Name: Configurations
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::EasyWorkspace.EWWorkspace
+  _files:
+  - {fileID: -4764515307580112959}
+  - {fileID: 7045335709650837853}
+  - {fileID: 7142774540025153363}
+  _position: {x: 0, y: 0, z: 0}
+  _zoom: {x: 1, y: 1, z: 1}
+  _added: 1
+  _opened: 1
+  _order: 1
+--- !u!114 &7045335709650837853
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d0c28417ec4139bfe3ce01e567abd3, type: 3}
+  m_Name: EWAsset
+  m_EditorClassIdentifier: Assembly-CSharp-Editor-firstpass::EasyWorkspace.EWAsset
+  _title: 
+  _position: {x: 358, y: 99.44, z: 0}
+  _size: {x: 90, y: 115, z: 0}
+  _collapsed: 0
+  _color: Default
+  _asset: {fileID: 11400000, guid: a93be49f962b5ef48adfb0c8c289564f, type: 2}
+  _styleIndex: 0
+--- !u!114 &7142774540025153363
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e406c6667bd24f389be0f814c3ff2862, type: 3}
+  m_Name: EWFolder
+  m_EditorClassIdentifier: Assembly-CSharp-Editor-firstpass::EasyWorkspace.EWFolder
+  _title: Bootstrap
+  _position: {x: 24.666666, y: 88.77333, z: 0}
+  _size: {x: 200, y: 198, z: 0}
+  _collapsed: 0
+  _color: Default
+  _assets:
+  - {fileID: 3256694729940607405, guid: f736e88e2987d5e48869c39dc3823c37, type: 3}
+  - {fileID: 794591249596559561, guid: b048391668bad614a93c893303d88dfd, type: 3}
+  - {fileID: 3271490262724832698, guid: cb0ea0ced83677240bf90f43effbca1d, type: 3}
+  _assetScale: 0
+  _folderType: 0
+  _directories: []
+  _sortByName: 0
+  _sortByType: 1
+  _deepSearch: 0
+  _filter: -1
+  _searchFilter: 
+  _scrollPosition: {x: 0, y: 0}
+  _directoriesFoldout: 1

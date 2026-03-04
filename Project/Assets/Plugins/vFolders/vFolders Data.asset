@@ -13,6 +13,36 @@ MonoBehaviour:
   m_Name: vFolders Data
   m_EditorClassIdentifier: VFolders::VFolders.VFoldersData
   folderDatas_byGuid:
-    keys: []
-    values: []
+    keys:
+    - 21b51f23a2efda54e887be928418df0a
+    - 4582863ac87066c47ab7d988ae2d230d
+    - cc78f777915d7d54ebb6cc8eed5a951e
+    - 9eb57938f2184364d9bcb38dca8853ff
+    - 3c4cd900a8cf846468d9c1186d697e92
+    - b3aacf670f4808b47b282a3e22e52c44
+    values:
+    - iconNameOrGuid: 
+      colorIndex: 8
+      isIconRecursive: 0
+      isColorRecursive: 1
+    - iconNameOrGuid: 
+      colorIndex: 7
+      isIconRecursive: 0
+      isColorRecursive: 1
+    - iconNameOrGuid: 
+      colorIndex: 10
+      isIconRecursive: 0
+      isColorRecursive: 1
+    - iconNameOrGuid: Shader Icon
+      colorIndex: 10
+      isIconRecursive: 1
+      isColorRecursive: 1
+    - iconNameOrGuid: Shader Icon
+      colorIndex: 10
+      isIconRecursive: 1
+      isColorRecursive: 1
+    - iconNameOrGuid: Prefab Icon
+      colorIndex: 2
+      isIconRecursive: 1
+      isColorRecursive: 1
   bookmarks: []
