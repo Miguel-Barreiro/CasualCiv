@@ -77,3 +77,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95454990f97f44828e1480ba2a7e3e3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GameAssemblyDef::Scenes.MainMenu.MainMenuBootstrap
+  MenusConfig: {fileID: 11400000, guid: bc547e661eb0a3644b546c556e212815, type: 2}

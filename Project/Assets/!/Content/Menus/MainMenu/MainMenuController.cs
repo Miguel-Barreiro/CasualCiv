@@ -23,6 +23,7 @@ namespace Menus.MainMenu
 
 		private void OnPlayButtonClicked()
 		{
+			UIRoot.HideAll();
 			ScenesController.SwitchScene(SceneNames.PLAY_SCENE);
 		}
 	}
