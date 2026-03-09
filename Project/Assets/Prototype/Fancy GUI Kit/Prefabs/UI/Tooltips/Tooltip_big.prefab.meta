@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 912413f86ef5e144483dec67d81432ed
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169906
+  packageName: Fancy GUI Kit
+  packageVersion: 2.1
+  assetPath: Assets/polyperfect/Fancy GUI Kit/Prefabs/UI/Tooltips/Tooltip_big.prefab
+  uploadId: 550665

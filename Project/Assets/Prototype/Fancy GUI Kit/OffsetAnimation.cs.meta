@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cd02d801a1db0c94a83b1d1c50f9ca88
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169906
+  packageName: Fancy GUI Kit
+  packageVersion: 2.1
+  assetPath: Assets/polyperfect/Fancy GUI Kit/OffsetAnimation.cs
+  uploadId: 550665

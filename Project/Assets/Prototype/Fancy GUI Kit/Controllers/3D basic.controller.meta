@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0d5d42e53e8be2f40bd6987e4fb933ce
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169906
+  packageName: Fancy GUI Kit
+  packageVersion: 2.1
+  assetPath: Assets/polyperfect/Fancy GUI Kit/Controllers/3D basic.controller
+  uploadId: 550665

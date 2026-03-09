@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4ec88a20eb6c9fb4a9c0d79d4f9ffe5e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169906
+  packageName: Fancy GUI Kit
+  packageVersion: 2.1
+  assetPath: Assets/polyperfect/Fancy GUI Kit/Prefabs/UI/Loadings/Loading_Text.prefab
+  uploadId: 550665

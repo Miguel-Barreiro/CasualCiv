@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8b3adf88c14a6e9dcda011a79a70b0, type: 3}
+  m_Name: BoardViewConfig
+  m_EditorClassIdentifier: GameAssemblyDef::Game.Board.BoardViewConfig
+  water: {fileID: 11400000, guid: df8f5268c10f3f243b1fbc5117f5de3d, type: 2}
+  bushes: {fileID: 11400000, guid: 550af5b8a5444514f907ce1b90c0578c, type: 2}
+  tree: {fileID: 11400000, guid: f56aff1fe00d6c2479386ccc75e3a63a, type: 2}
+  testTile: {fileID: 11400000, guid: be101ddb89871b0448e229189dcfc556, type: 2}

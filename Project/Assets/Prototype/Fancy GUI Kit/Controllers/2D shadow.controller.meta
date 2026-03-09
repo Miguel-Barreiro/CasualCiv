@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b5e9f4815596634439b2a5ea4df7066d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169906
+  packageName: Fancy GUI Kit
+  packageVersion: 2.1
+  assetPath: Assets/polyperfect/Fancy GUI Kit/Controllers/2D shadow.controller
+  uploadId: 550665

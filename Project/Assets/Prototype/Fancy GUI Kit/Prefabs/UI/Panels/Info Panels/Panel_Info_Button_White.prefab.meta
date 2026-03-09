@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 943e7714d1bbb2147bc79bcc85d147c7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169906
+  packageName: Fancy GUI Kit
+  packageVersion: 2.1
+  assetPath: Assets/polyperfect/Fancy GUI Kit/Prefabs/UI/Panels/Info Panels/Panel_Info_Button_White.prefab
+  uploadId: 550665

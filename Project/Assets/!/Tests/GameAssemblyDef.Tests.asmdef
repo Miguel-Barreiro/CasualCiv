@@ -1,0 +1,25 @@
+{
+    "name": "GameAssemblyDef.Tests",
+    "rootNamespace": "",
+    "references": [
+        "GameAssemblyDef",
+        "TestsBase",
+        "Core.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "Zenject-usage.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_EDITOR"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

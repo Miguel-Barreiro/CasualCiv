@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8a4215abca7f728489d8010aafb87614
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169906
+  packageName: Fancy GUI Kit
+  packageVersion: 2.1
+  assetPath: Assets/polyperfect/Fancy GUI Kit/Controllers/2D sprite-sparks.controller
+  uploadId: 550665

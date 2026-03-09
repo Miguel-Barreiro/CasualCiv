@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 22accd4aed7ed43e0ba8b0efb8470585
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169906
+  packageName: Fancy GUI Kit
+  packageVersion: 2.1
+  assetPath: Assets/polyperfect/Fancy GUI Kit/Controllers/2D sprite-shine.controller
+  uploadId: 550665

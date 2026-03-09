@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bddf7a8c30b50e647ba256b7a69fbd11
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169906
+  packageName: Fancy GUI Kit
+  packageVersion: 2.1
+  assetPath: Assets/polyperfect/Fancy GUI Kit/Prefabs/UI/Panels/Tile Character/Tile_Character_Wizard.prefab
+  uploadId: 550665

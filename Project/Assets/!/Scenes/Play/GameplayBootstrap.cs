@@ -1,17 +1,45 @@
+using System;
 using Core.Initialization;
 using Core.Model.ModelSystems;
 using Core.Zenject.Source.Main;
+using Game;
+using Game.Board;
+using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace Scenes.Play
 {
+
+	[Serializable]
+	public sealed class GameplayViewConfig
+	{
+		[SerializeField] private BoardViewConfig boardViewConfig;
+		public BoardViewConfig BoardViewConfig => boardViewConfig;
+
+		
+		[SerializeField] private Tilemap groundTilemap;
+		public Tilemap GroundTilemap => groundTilemap;
+
+		[SerializeField] private Tilemap surfaceTilemap;
+		public Tilemap SurfaceTilemap => surfaceTilemap;
+		
+		[SerializeField] private Tilemap objectsTilemap;
+		public Tilemap ObjectsTilemap => objectsTilemap;
+		
+		[SerializeField] private Tilemap airTilemap;
+		public Tilemap AirTilemap => surfaceTilemap;
+	}
+
 	public sealed class GameplayBootstrap : SceneBootstrap
 	{
+		[SerializeField] private GameplayViewConfig GameplayViewConfig;
+		
 		private GameplayInstaller _installer;
 
 		public override SystemsInstallerBase GetLogicInstaller()
 		{
 			if(_installer == null)
-				_installer = new GameplayInstaller(Container);
+				_installer = new GameplayInstaller(Container, GameplayViewConfig);
 
 			return _installer;
 		}
@@ -19,9 +47,9 @@ namespace Scenes.Play
 	
 	public sealed class GameplayInstaller : SystemsInstallerBase
 	{
-		public GameplayInstaller(DiContainer container) : base(container)
-		{
-		}
+		private readonly GameplayViewConfig GameplayViewConfig;
+
+		public GameplayInstaller(DiContainer container, GameplayViewConfig gameplayViewConfig) : base(container) { GameplayViewConfig = gameplayViewConfig; }
 
 		public override void SetupConfigurations()
 		{
@@ -30,7 +58,10 @@ namespace Scenes.Play
 
 		protected override void InstallSystems()
 		{
-			
+			GameEntity gameEntity = new GameEntity();
+			BindInstance(gameEntity);
+			BindInstance(new BoardSystem());
+			BindInstance(GameplayViewConfig);
 		}
 
 		public override void ResetComponentContainers(DataContainersController dataController)

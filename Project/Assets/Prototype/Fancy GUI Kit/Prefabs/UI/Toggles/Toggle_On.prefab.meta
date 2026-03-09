@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ececd5083a4446b448230f5505b55cc6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169906
+  packageName: Fancy GUI Kit
+  packageVersion: 2.1
+  assetPath: Assets/polyperfect/Fancy GUI Kit/Prefabs/UI/Toggles/Toggle_On.prefab
+  uploadId: 550665

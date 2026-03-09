@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 95f35b1f1d1e46e4e99717c7966cb5bd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169906
+  packageName: Fancy GUI Kit
+  packageVersion: 2.1
+  assetPath: Assets/polyperfect/Fancy GUI Kit/Prefabs/UI/Toggles/Toggle_Switch_On.prefab
+  uploadId: 550665
