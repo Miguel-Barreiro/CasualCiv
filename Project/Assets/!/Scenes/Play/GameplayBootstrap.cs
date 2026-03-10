@@ -2,8 +2,10 @@ using System;
 using Core.Initialization;
 using Core.Model.ModelSystems;
 using Core.Zenject.Source.Main;
+using DebugUtils;
 using Game;
 using Game.Board;
+using Game.Entities;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -27,7 +29,7 @@ namespace Scenes.Play
 		public Tilemap ObjectsTilemap => objectsTilemap;
 		
 		[SerializeField] private Tilemap airTilemap;
-		public Tilemap AirTilemap => surfaceTilemap;
+		public Tilemap AirTilemap => airTilemap;
 	}
 
 	public sealed class GameplayBootstrap : SceneBootstrap
@@ -60,8 +62,14 @@ namespace Scenes.Play
 		{
 			GameEntity gameEntity = new GameEntity();
 			BindInstance(gameEntity);
+			
 			BindInstance(new BoardSystem());
+			BindInstance(new BoardViewSystem());
+
+			BindInstance(new EntitySpawnSystem());
 			BindInstance(GameplayViewConfig);
+			
+			BindInstance(new DebugGameplaySystem());
 		}
 
 		public override void ResetComponentContainers(DataContainersController dataController)

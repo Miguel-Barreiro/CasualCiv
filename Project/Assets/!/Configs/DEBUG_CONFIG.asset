@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c6230ad4664f9080c7cecb7b803970, type: 3}
+  m_Name: DEBUG_CONFIG
+  m_EditorClassIdentifier: GameAssemblyDef::Global.DebugConfig
+  Id: -tUswn9SPNA
+  name: Default Testing/Debuging Config
+  testTile: {fileID: 11400000, guid: be101ddb89871b0448e229189dcfc556, type: 2}
+  testEntityConfig: {fileID: 11400000, guid: cfb8ad3032ec9234da97c6e69008eda1, type: 2}

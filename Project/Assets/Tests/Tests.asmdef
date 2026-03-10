@@ -1,10 +1,15 @@
 {
-    "name": "GameAssemblyDef.Tests",
+    "name": "Tests",
     "rootNamespace": "",
     "references": [
-        "GameAssemblyDef",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
         "TestsBase",
-        "Core.Runtime"
+        "Core.Runtime",
+        "Zenject",
+        "UniTask",
+        "GameTestsASMDEF",
+        "GameAssemblyDef"
     ],
     "includePlatforms": [
         "Editor"
@@ -18,7 +23,7 @@
     ],
     "autoReferenced": false,
     "defineConstraints": [
-        "UNITY_EDITOR"
+        "UNITY_INCLUDE_TESTS"
     ],
     "versionDefines": [],
     "noEngineReferences": false

@@ -4,8 +4,10 @@ using Core.Model;
 using Core.Model.ModelSystems;
 using Core.Systems;
 using Core.View;
+using Game.Board;
 using Global;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using Zenject;
 
 namespace Game
@@ -19,30 +21,39 @@ namespace Game
         Air     = 1 << 3,
     }
 
-    public interface IWorldComponent : Component<WorldComponentData> { }
+    public interface IWorldComponent : Component<WorldEntityComponentData> { }
 
     [StructLayout(LayoutKind.Auto)]
-    public struct WorldComponentData : IComponentData
+    public struct WorldEntityComponentData : IComponentData
     {
+
         public EntId ID { get; set; }
         public Vector2Int TilePosition;
         public WorldObjectType ObjectType;
-        public void Init() { }
+        public TileBase Tile;
+
+        public void Init()
+        {
+            TilePosition = BoardSystem.FLOATING_POSITION;
+        }
+        
+        public bool IsFloating() => TilePosition == BoardSystem.FLOATING_POSITION;
     }
+    
 
     /// Base system for any logic that manages world-visible entities.
     /// Subclasses implement OnCreateComponent and call CreateView(id, prefab) to spawn the view.
-    public abstract class BaseWorldComponentLogic : OnDestroyComponent<WorldComponentData>,
-                                                    UpdateComponents<WorldComponentData>
+    public abstract class BaseWorldComponentLogic : OnDestroyComponent<WorldEntityComponentData>,
+                                                    UpdateComponents<WorldEntityComponentData>
     {
         [Inject] protected readonly IViewEntitiesContainer ViewEntitiesContainer = null!;
-        [Inject] protected readonly BasicCompContainer<WorldComponentData> Container = null!;
+        [Inject] protected readonly BasicCompContainer<WorldEntityComponentData> Container = null!;
         [Inject] private readonly GameConfig _gameConfig = null!;
 
         public bool Active { get; set; } = true;
         public SystemGroup Group { get; } = CoreSystemGroups.CoreViewEntitySystemGroup;
 
-        protected static bool IsTypeOf(ref WorldComponentData data, WorldObjectType type)
+        protected static bool IsTypeOf(ref WorldEntityComponentData data, WorldObjectType type)
             => (data.ObjectType & type) != 0;
 
         protected void CreateView(EntId entityId, GameObject prefab)
@@ -61,7 +72,7 @@ namespace Game
             uint count = Container.Count;
             for (int i = 0; i < count; i++)
             {
-                ref WorldComponentData data = ref Container.Components[i];
+                ref WorldEntityComponentData data = ref Container.Components[i];
                 EntityViewAtributes? view = ViewEntitiesContainer.GetEntityViewAtributes(data.ID);
                 if (view?.GameObject != null)
                     view.GameObject.transform.position = new Vector3(

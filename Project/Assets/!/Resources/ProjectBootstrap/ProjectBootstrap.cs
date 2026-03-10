@@ -14,7 +14,7 @@ namespace Global.Logic
         [SerializeField] private MenusConfig MenusConfig = null!;
         [SerializeField] private GameConfig GameConfig = null!;
         [SerializeField] private GameStatsContainer GameStatsContainer;
-        
+        [SerializeField] private DebugConfig DebugConfig;
         
         // [SerializeField] private BouncyCoreStatsContainer CoreStatsContainer;
         // [SerializeField] private GameplayOptionsListConfig GameplayOptionsListConfig = null!;
@@ -26,7 +26,7 @@ namespace Global.Logic
         {
             if(_installer == null)
             {
-                _installer = new GameProjectInstaller(Container, MenusConfig, GameConfig, GameStatsContainer);
+                _installer = new GameProjectInstaller(Container, MenusConfig, GameConfig, GameStatsContainer, DebugConfig);
                 // , CoreStatsContainer, 
                 //     GameplayOptionsListConfig,
                 //     LevelsConfig, GamePrefabsConfig);
@@ -40,19 +40,22 @@ namespace Global.Logic
 
     public sealed class GameProjectInstaller : SystemsInstallerBase
     {
-        private MenusConfig _menusConfig;
-        private GameConfig _gameConfig;
-        private GameStatsContainer _gameStatsContainer;
+        private readonly MenusConfig MenusConfig;
+        private readonly GameConfig GameConfig;
+        private readonly GameStatsContainer GameStatsContainer;
+        private readonly DebugConfig DebugConfig;
 
-        public GameProjectInstaller(DiContainer container, 
-                                    MenusConfig menusConfig, 
+        public GameProjectInstaller(DiContainer container,
+                                    MenusConfig menusConfig,
                                     GameConfig gameConfig,
-                                    GameStatsContainer gameStatsContainer)
+                                    GameStatsContainer gameStatsContainer, 
+                                    DebugConfig debugConfig)
             : base(container)
         {
-            _gameStatsContainer = gameStatsContainer;
-            _gameConfig = gameConfig;
-            _menusConfig = menusConfig;
+            GameStatsContainer = gameStatsContainer;
+            DebugConfig = debugConfig;
+            GameConfig = gameConfig;
+            MenusConfig = menusConfig;
         }
 
         public override void SetupConfigurations()
@@ -64,10 +67,10 @@ namespace Global.Logic
 
         protected override void InstallSystems()
         {
-            BindInstance<GameStatsContainer>(_gameStatsContainer);
-            BindInstance<GameConfig>(_gameConfig);
-            BindInstance<MenusConfig>(_menusConfig);
-
+            BindInstance<GameStatsContainer>(GameStatsContainer);
+            BindInstance<GameConfig>(GameConfig);
+            BindInstance<MenusConfig>(MenusConfig);
+            BindInstance<DebugConfig>(DebugConfig);
             
             
 //             PreConfigGameplayOptionsSystem preConfigGameplayOptionsSystem = new PreConfigGameplayOptionsSystem();

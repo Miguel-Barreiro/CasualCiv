@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d3171f033d1713b428fe49ea8025a3eb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - testAirEntityConfig: {fileID: 11400000, guid: 66f592cc6fb47864ebd8d05ac7b35e41, type: 2}
+  - testSurfaceEntityConfig: {fileID: 11400000, guid: a712b5f4af5da4f4199bc286a0d69190, type: 2}
+  - testFloorEntityConfig: {fileID: 11400000, guid: dc882f199bd62024190b5eb9979e30e1, type: 2}
+  - testSurfaceGroundEntityConfig: {fileID: 11400000, guid: e374f2b227cc39a4baa7280ee5669ee5, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

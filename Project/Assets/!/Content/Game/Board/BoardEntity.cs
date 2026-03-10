@@ -8,6 +8,7 @@ namespace Game.Board
 {
 	public class BoardEntity : Entity, IBoardComponent
 	{
+		
 	}
 
 	public interface IBoardComponent : Component<BoardComponentData> { }
@@ -21,6 +22,12 @@ namespace Game.Board
 		public Dictionary<Vector2Int, EntId> ObjectEntities;
 		public Dictionary<Vector2Int, EntId> AirEntities;
 
-		public void Init() { }
+		public void Init()
+		{
+			FloorEntities   = new Dictionary<Vector2Int, EntId>();
+			SurfaceEntities = new Dictionary<Vector2Int, EntId>();
+			ObjectEntities  = new Dictionary<Vector2Int, EntId>();
+			AirEntities     = new Dictionary<Vector2Int, EntId>();
+		}
 	}
 }

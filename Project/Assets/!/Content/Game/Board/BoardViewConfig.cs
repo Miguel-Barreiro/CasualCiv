@@ -16,8 +16,5 @@ namespace Game.Board
 		[SerializeField] private TileBase tree;
 		public TileBase Tree => tree;
 		
-		[SerializeField] private TileBase testTile;
-		public TileBase TestTile => testTile;
-
 	}
 }

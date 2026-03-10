@@ -78,3 +78,4 @@ MonoBehaviour:
   MenusConfig: {fileID: 11400000, guid: bc547e661eb0a3644b546c556e212815, type: 2}
   GameConfig: {fileID: 11400000, guid: a93be49f962b5ef48adfb0c8c289564f, type: 2}
   GameStatsContainer: {fileID: 11400000, guid: 0f02757a7b4ec11489a3abe441ae7a3f, type: 2}
+  DebugConfig: {fileID: 11400000, guid: 3f39be03526aefa4fa14f79d7449c7ff, type: 2}
