@@ -77,4 +77,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9429c47bfb57435b941abd847b4a8bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GameAssemblyDef::Scenes.Play.GameplayBootstrap
-  GameplayViewConfig: {fileID: 11400000, guid: 977f878e3d1a96b48b5cb36b44eca0be, type: 2}
+  GameplayViewConfig:
+    boardViewConfig: {fileID: 0}
+    gameUIConfig: {fileID: 11400000, guid: 89966407ec8822644ab95adadb56d40b, type: 2}
+    groundTilemap: {fileID: 0}
+    surfaceTilemap: {fileID: 0}
+    objectsTilemap: {fileID: 0}
+    airTilemap: {fileID: 0}

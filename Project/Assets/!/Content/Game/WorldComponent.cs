@@ -40,46 +40,4 @@ namespace Game
         public bool IsFloating() => TilePosition == BoardSystem.FLOATING_POSITION;
     }
     
-
-    /// Base system for any logic that manages world-visible entities.
-    /// Subclasses implement OnCreateComponent and call CreateView(id, prefab) to spawn the view.
-    public abstract class BaseWorldComponentLogic : OnDestroyComponent<WorldEntityComponentData>,
-                                                    UpdateComponents<WorldEntityComponentData>
-    {
-        [Inject] protected readonly IViewEntitiesContainer ViewEntitiesContainer = null!;
-        [Inject] protected readonly BasicCompContainer<WorldEntityComponentData> Container = null!;
-        [Inject] private readonly GameConfig _gameConfig = null!;
-
-        public bool Active { get; set; } = true;
-        public SystemGroup Group { get; } = CoreSystemGroups.CoreViewEntitySystemGroup;
-
-        protected static bool IsTypeOf(ref WorldEntityComponentData data, WorldObjectType type)
-            => (data.ObjectType & type) != 0;
-
-        protected void CreateView(EntId entityId, GameObject prefab)
-        {
-            ViewEntitiesContainer.Spawn(prefab, entityId);
-        } 
-
-        public void OnDestroyComponent(EntId destroyedComponentId)
-        {
-            ViewEntitiesContainer.Destroy(destroyedComponentId);
-        }
-
-        public void UpdateComponents(float deltaTime)
-        {
-            Vector2 tileSize = _gameConfig.TileSize;
-            uint count = Container.Count;
-            for (int i = 0; i < count; i++)
-            {
-                ref WorldEntityComponentData data = ref Container.Components[i];
-                EntityViewAtributes? view = ViewEntitiesContainer.GetEntityViewAtributes(data.ID);
-                if (view?.GameObject != null)
-                    view.GameObject.transform.position = new Vector3(
-                        data.TilePosition.x * tileSize.x,
-                        data.TilePosition.y * tileSize.y,
-                        0f);
-            }
-        }
-    }
 }

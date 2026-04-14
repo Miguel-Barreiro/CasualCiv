@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e073d4fef44fd0a9d7c9f0ee977bf7, type: 3}
+  m_Name: GameUI_SD
+  m_EditorClassIdentifier: Core.Runtime::Core.View.UI.UIScreenDefinition
+  Id: tSsgajKCqIf
+  name: GameUI_SD
+  lifetimeType: 0
+  uiPrefab: {fileID: 9197692974492918440, guid: 42eca5eba552a8b4799532b3868dc04d, type: 3}

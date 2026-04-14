@@ -6,7 +6,9 @@ using DebugUtils;
 using Game;
 using Game.Board;
 using Game.Entities;
+using Game.UI;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 
 namespace Scenes.Play
@@ -18,6 +20,8 @@ namespace Scenes.Play
 		[SerializeField] private BoardViewConfig boardViewConfig;
 		public BoardViewConfig BoardViewConfig => boardViewConfig;
 
+		[SerializeField] private GameUIConfig gameUIConfig;
+		public GameUIConfig GameUIConfig => gameUIConfig;
 		
 		[SerializeField] private Tilemap groundTilemap;
 		public Tilemap GroundTilemap => groundTilemap;
@@ -51,15 +55,20 @@ namespace Scenes.Play
 	{
 		private readonly GameplayViewConfig GameplayViewConfig;
 
-		public GameplayInstaller(DiContainer container, GameplayViewConfig gameplayViewConfig) : base(container) { GameplayViewConfig = gameplayViewConfig; }
+		public GameplayInstaller(DiContainer container, GameplayViewConfig gameplayViewConfig) : base(container)
+		{
+			GameplayViewConfig = gameplayViewConfig;
+		}
 
 		public override void SetupConfigurations()
 		{
-			
+			BindInstance(GameplayViewConfig);
+			BindInstance(GameplayViewConfig.GameUIConfig);
 		}
 
 		protected override void InstallSystems()
 		{
+			
 			GameEntity gameEntity = new GameEntity();
 			BindInstance(gameEntity);
 			
@@ -67,9 +76,14 @@ namespace Scenes.Play
 			BindInstance(new BoardViewSystem());
 
 			BindInstance(new EntitySpawnSystem());
-			BindInstance(GameplayViewConfig);
+			
 			
 			BindInstance(new DebugGameplaySystem());
+			
+			GameUIMessenger gameUIMessenger = new GameUIMessenger();
+			RegisterUIScreenDefinition(GameplayViewConfig.GameUIConfig.MainGameUI, gameUIMessenger);
+			BindInstance(new GameUISystem());
+			BindInstance(gameUIMessenger);
 		}
 
 		public override void ResetComponentContainers(DataContainersController dataController)

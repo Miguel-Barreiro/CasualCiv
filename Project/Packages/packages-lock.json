@@ -16,7 +16,7 @@
         "com.unity.nuget.newtonsoft-json": "3.2.1 ",
         "com.miguel.xnode": "1.8.2"
       },
-      "hash": "5345e471f66cfcf832a7ae14bb79e28df57450b7"
+      "hash": "3ba077b1f6cedf8bb97fcf9826c01b198f0cd668"
     },
     "com.miguel.xnode": {
       "version": "https://github.com/Miguel-Barreiro/xNode.git",
@@ -202,7 +202,7 @@
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.39",
+      "version": "3.0.40",
       "depth": 0,
       "source": "registry",
       "dependencies": {
