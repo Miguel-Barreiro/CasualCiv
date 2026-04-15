@@ -1,0 +1,1456 @@
+fileFormatVersion: 2
+guid: 5418adfbfb57d274e9bb550f66f7cf0e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4261006093224435964
+    second: Hex - IDland AI_0
+  - first:
+      213: -4384993323354035953
+    second: Hex - IDland AI_1
+  - first:
+      213: -4574978847442393515
+    second: Hex - IDland AI_2
+  - first:
+      213: 2447605050902418150
+    second: Hex - IDland AI_3
+  - first:
+      213: -5322781689659414141
+    second: Hex - IDland AI_4
+  - first:
+      213: 7975748134815359669
+    second: Hex - IDland AI_5
+  - first:
+      213: -1786877845980746857
+    second: Hex - IDland AI_6
+  - first:
+      213: -8393462812249897664
+    second: Hex - IDland AI_7
+  - first:
+      213: -7091140360500294020
+    second: Hex - IDland AI_8
+  - first:
+      213: -3823361350620330419
+    second: Hex - IDland AI_9
+  - first:
+      213: -5487775823719589754
+    second: Hex - IDland AI_10
+  - first:
+      213: -7682975522844743457
+    second: Hex - IDland AI_11
+  - first:
+      213: 1360032965020291349
+    second: Hex - IDland AI_12
+  - first:
+      213: -8095658185660957756
+    second: Hex - IDland AI_13
+  - first:
+      213: 6606133896459661443
+    second: Hex - IDland AI_14
+  - first:
+      213: 4566631585752609542
+    second: Hex - IDland AI_15
+  - first:
+      213: 9170618399263376610
+    second: Hex - IDland AI_16
+  - first:
+      213: -5628822774814544316
+    second: Hex - IDland AI_17
+  - first:
+      213: 4729146103919561704
+    second: Hex - IDland AI_18
+  - first:
+      213: -443132607404728709
+    second: Hex - IDland AI_19
+  - first:
+      213: 6050517196081929572
+    second: Hex - IDland AI_20
+  - first:
+      213: 5952206413649126654
+    second: Hex - IDland AI_21
+  - first:
+      213: -4411498920662879612
+    second: Hex - IDland AI_22
+  - first:
+      213: 5057043084667876761
+    second: Hex - IDland AI_23
+  - first:
+      213: -6681541300066797331
+    second: Hex - IDland AI_24
+  - first:
+      213: 1227712218636584838
+    second: Hex - IDland AI_25
+  - first:
+      213: -7430568329243348638
+    second: Hex - IDland AI_26
+  - first:
+      213: 6314538184761347604
+    second: Hex - IDland AI_27
+  - first:
+      213: -2770325263517024042
+    second: Hex - IDland AI_28
+  - first:
+      213: -8198424079561479244
+    second: Hex - IDland AI_29
+  - first:
+      213: 4207262857597487241
+    second: Hex - IDland AI_30
+  - first:
+      213: -5863023278856385925
+    second: Hex - IDland AI_31
+  - first:
+      213: 6883387436435174888
+    second: Hex - IDland AI_32
+  - first:
+      213: -8154990284837861131
+    second: Hex - IDland AI_33
+  - first:
+      213: -4788490260076107296
+    second: Hex - IDland AI_34
+  - first:
+      213: -4731997586870003377
+    second: Hex - IDland AI_35
+  - first:
+      213: 2392635473863731323
+    second: Hex - IDland AI_36
+  - first:
+      213: 7553599117879157238
+    second: Hex - IDland AI_37
+  - first:
+      213: 4970408399127967193
+    second: Hex - IDland AI_38
+  - first:
+      213: -5645999524182222781
+    second: Hex - IDland AI_39
+  - first:
+      213: -2994378185437782432
+    second: Hex - IDland AI_40
+  - first:
+      213: -296699887627196909
+    second: Hex - IDland AI_41
+  - first:
+      213: 8704631718997140587
+    second: Hex - IDland AI_42
+  - first:
+      213: 3731272880587603144
+    second: Hex - IDland AI_43
+  - first:
+      213: 1172249107995345074
+    second: Hex - IDland AI_44
+  - first:
+      213: 8038819634894497182
+    second: Hex - IDland AI_45
+  - first:
+      213: 7661314606013272868
+    second: Hex - IDland AI_46
+  - first:
+      213: -301851112666572452
+    second: Hex - IDland AI_47
+  - first:
+      213: -3975955073414465361
+    second: Hex - IDland AI_48
+  - first:
+      213: 3436362904944605899
+    second: Hex - IDland AI_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80.2
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hex - IDland AI_0
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 947
+        width: 80
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f1593b88dddd4c0800000000000000
+      internalID: -4261006093224435964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_1
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 945
+        width: 80
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f09e50b1ecf5523c0800000000000000
+      internalID: -4384993323354035953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_2
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 941
+        width: 81
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556254f3af86280c0800000000000000
+      internalID: -4574978847442393515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_3
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 931
+        width: 80
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e29d7963d3a7f120800000000000000
+      internalID: 2447605050902418150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_4
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 832
+        width: 70
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389a5ea214ea126b0800000000000000
+      internalID: -5322781689659414141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_5
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 838
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b267a9dbac8fae60800000000000000
+      internalID: 7975748134815359669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_6
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 838
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b6d4df01cb337e0800000000000000
+      internalID: -1786877845980746857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_7
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 812
+        width: 81
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045c460fa0e648b80800000000000000
+      internalID: -8393462812249897664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_8
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 815
+        width: 81
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ec1ff9965379d90800000000000000
+      internalID: -7091140360500294020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_9
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 819
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d464150db11b0fac0800000000000000
+      internalID: -3823361350620330419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_10
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 759
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688973cb6f087d3b0800000000000000
+      internalID: -5487775823719589754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_11
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 768
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd861d6d776906590800000000000000
+      internalID: -7682975522844743457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_12
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 751
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5111bd2a6cecfd210800000000000000
+      internalID: 1360032965020291349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_13
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 729
+        width: 80
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cbf1b4d5c176af80800000000000000
+      internalID: -8095658185660957756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_14
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 706
+        width: 82
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 380352d27c3bdab50800000000000000
+      internalID: 6606133896459661443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_15
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 706
+        width: 81
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603fcd07b3fef5f30800000000000000
+      internalID: 4566631585752609542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_16
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 705
+        width: 81
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e441ca98d4944f70800000000000000
+      internalID: 9170618399263376610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_17
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 647
+        width: 80
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44eec83528762e1b0800000000000000
+      internalID: -5628822774814544316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_18
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 646
+        width: 70
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb4c0f435d41a140800000000000000
+      internalID: 4729146103919561704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_19
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 616
+        width: 80
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e9f3bcd3da9d9f0800000000000000
+      internalID: -443132607404728709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_20
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 618
+        width: 80
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d1bd33551c7f350800000000000000
+      internalID: 6050517196081929572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_21
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 618
+        width: 80
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef4ab53723c7a9250800000000000000
+      internalID: 5952206413649126654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_22
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 523
+        width: 80
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482bed2da1537c2c0800000000000000
+      internalID: -4411498920662879612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_23
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 523
+        width: 81
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995797364e93e2640800000000000000
+      internalID: 5057043084667876761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_24
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 523
+        width: 80
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8ba6186956643a0800000000000000
+      internalID: -6681541300066797331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_25
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 523
+        width: 80
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6878d3612c5b90110800000000000000
+      internalID: 1227712218636584838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_26
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 523
+        width: 80
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261be20397151e890800000000000000
+      internalID: -7430568329243348638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 408
+        width: 81
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e075fe50fb1a750800000000000000
+      internalID: 6314538184761347604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_28
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 409
+        width: 80
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d007c3c9d3dd89d0800000000000000
+      internalID: -2770325263517024042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_29
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 407
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bbaabb9cb8593e80800000000000000
+      internalID: -8198424079561479244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_30
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 408
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9880bc72743336a30800000000000000
+      internalID: 4207262857597487241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_31
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 408
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a4be9346b52aea0800000000000000
+      internalID: -5863023278856385925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_32
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 408
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5fa185764b68f50800000000000000
+      internalID: 6883387436435174888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_33
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 408
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f84a7dfa87a3de80800000000000000
+      internalID: -8154990284837861131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_34
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 408
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9eebd9a7ddb8db0800000000000000
+      internalID: -4788490260076107296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_35
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 409
+        width: 80
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f499b941441945eb0800000000000000
+      internalID: -4731997586870003377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_36
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 409
+        width: 80
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7865a86949543120800000000000000
+      internalID: 2392635473863731323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_37
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 408
+        width: 79
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f124e48066c3d860800000000000000
+      internalID: 7553599117879157238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 297
+        width: 79
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5f3aaca107af440800000000000000
+      internalID: 4970408399127967193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_39
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 298
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3481817b85165a1b0800000000000000
+      internalID: -5645999524182222781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_40
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 297
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e5dcdb7e4d176d0800000000000000
+      internalID: -2994378185437782432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_41
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 298
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31625113609e1ebf0800000000000000
+      internalID: -296699887627196909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 298
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b642c67ed601dc870800000000000000
+      internalID: 8704631718997140587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_43
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 298
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ccf87f6ae428c330800000000000000
+      internalID: 3731272880587603144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_44
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 298
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b0c4565a5aa44010800000000000000
+      internalID: 1172249107995345074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_45
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 298
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e95625fcddf9f8f60800000000000000
+      internalID: 8038819634894497182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_46
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 298
+        width: 81
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423dee3fa05725a60800000000000000
+      internalID: 7661314606013272868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_47
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 298
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59d376230c9fcbf0800000000000000
+      internalID: -301851112666572452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_48
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 297
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa8f73e1de192d8c0800000000000000
+      internalID: -3975955073414465361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hex - IDland AI_49
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 389
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca7d8cfad960bf20800000000000000
+      internalID: 3436362904944605899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1cf38e1b673a1e1489dc08d357d14fe4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Hex - IDland AI_0: -4261006093224435964
+      Hex - IDland AI_1: -4384993323354035953
+      Hex - IDland AI_10: -5487775823719589754
+      Hex - IDland AI_11: -7682975522844743457
+      Hex - IDland AI_12: 1360032965020291349
+      Hex - IDland AI_13: -8095658185660957756
+      Hex - IDland AI_14: 6606133896459661443
+      Hex - IDland AI_15: 4566631585752609542
+      Hex - IDland AI_16: 9170618399263376610
+      Hex - IDland AI_17: -5628822774814544316
+      Hex - IDland AI_18: 4729146103919561704
+      Hex - IDland AI_19: -443132607404728709
+      Hex - IDland AI_2: -4574978847442393515
+      Hex - IDland AI_20: 6050517196081929572
+      Hex - IDland AI_21: 5952206413649126654
+      Hex - IDland AI_22: -4411498920662879612
+      Hex - IDland AI_23: 5057043084667876761
+      Hex - IDland AI_24: -6681541300066797331
+      Hex - IDland AI_25: 1227712218636584838
+      Hex - IDland AI_26: -7430568329243348638
+      Hex - IDland AI_27: 6314538184761347604
+      Hex - IDland AI_28: -2770325263517024042
+      Hex - IDland AI_29: -8198424079561479244
+      Hex - IDland AI_3: 2447605050902418150
+      Hex - IDland AI_30: 4207262857597487241
+      Hex - IDland AI_31: -5863023278856385925
+      Hex - IDland AI_32: 6883387436435174888
+      Hex - IDland AI_33: -8154990284837861131
+      Hex - IDland AI_34: -4788490260076107296
+      Hex - IDland AI_35: -4731997586870003377
+      Hex - IDland AI_36: 2392635473863731323
+      Hex - IDland AI_37: 7553599117879157238
+      Hex - IDland AI_38: 4970408399127967193
+      Hex - IDland AI_39: -5645999524182222781
+      Hex - IDland AI_4: -5322781689659414141
+      Hex - IDland AI_40: -2994378185437782432
+      Hex - IDland AI_41: -296699887627196909
+      Hex - IDland AI_42: 8704631718997140587
+      Hex - IDland AI_43: 3731272880587603144
+      Hex - IDland AI_44: 1172249107995345074
+      Hex - IDland AI_45: 8038819634894497182
+      Hex - IDland AI_46: 7661314606013272868
+      Hex - IDland AI_47: -301851112666572452
+      Hex - IDland AI_48: -3975955073414465361
+      Hex - IDland AI_49: 3436362904944605899
+      Hex - IDland AI_5: 7975748134815359669
+      Hex - IDland AI_6: -1786877845980746857
+      Hex - IDland AI_7: -8393462812249897664
+      Hex - IDland AI_8: -7091140360500294020
+      Hex - IDland AI_9: -3823361350620330419
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
