@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "InputSystem_Actions",
     "maps": [
         {
@@ -986,6 +987,45 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Game",
+            "id": "a49d46ac-249b-4f96-a858-267e6c196041",
+            "actions": [
+                {
+                    "name": "Navigation",
+                    "type": "Value",
+                    "id": "dd324544-7af8-447e-8509-086a5a09f6c6",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "329c2eee-e5bd-447b-8c21-57338ec1ec0f",
+                    "path": "<Mouse>/delta",
+                    "interactions": "SlowTap",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Navigation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a02a971e-05f1-4bfa-bede-8d6ab42f7c9c",
+                    "path": "<Touchscreen>/primaryTouch/delta",
+                    "interactions": "SlowTap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigation",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

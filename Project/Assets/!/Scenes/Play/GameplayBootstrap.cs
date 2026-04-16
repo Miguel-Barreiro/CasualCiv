@@ -6,6 +6,7 @@ using DebugUtils;
 using Game;
 using Game.Board;
 using Game.Entities;
+using Game.Input;
 using Game.UI;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -22,7 +23,8 @@ namespace Scenes.Play
 
 		[SerializeField] private GameUIConfig gameUIConfig;
 		public GameUIConfig GameUIConfig => gameUIConfig;
-		
+
+		[Space(10)]
 		[SerializeField] private Tilemap groundTilemap;
 		public Tilemap GroundTilemap => groundTilemap;
 
@@ -34,6 +36,15 @@ namespace Scenes.Play
 		
 		[SerializeField] private Tilemap airTilemap;
 		public Tilemap AirTilemap => airTilemap;
+		
+		[Space(10)]
+		[SerializeField] private Camera _mainCamera;
+		public Camera MainCamera => _mainCamera;
+		
+		// [Space(10)] 
+		// [SerializeField] private InputActions _inputActions;
+		// public InputActions InputActions => _inputActions;
+
 	}
 
 	public sealed class GameplayBootstrap : SceneBootstrap
@@ -82,8 +93,12 @@ namespace Scenes.Play
 			
 			GameUIMessenger gameUIMessenger = new GameUIMessenger();
 			RegisterUIScreenDefinition(GameplayViewConfig.GameUIConfig.MainGameUI, gameUIMessenger);
-			BindInstance(new GameUISystem());
 			BindInstance(gameUIMessenger);
+			
+			BindInstance(new GameUISystem());
+			BindInstance(new TileInputSystem());
+
+			BindInstance(GameplayViewConfig.MainCamera);
 		}
 
 		public override void ResetComponentContainers(DataContainersController dataController)
