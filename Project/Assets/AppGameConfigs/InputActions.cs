@@ -125,25 +125,16 @@ namespace Game
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""852140f2-7766-474d-8707-702459ba45f3"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Hold"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Crouch"",
-                    ""type"": ""Button"",
-                    ""id"": ""27c5f898-bc57-4ee1-8800-db469aca5fe3"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""f1ba0d36-48eb-4cd5-b651-1c94a6531f70"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -152,7 +143,7 @@ namespace Game
                     ""name"": ""Previous"",
                     ""type"": ""Button"",
                     ""id"": ""2776c80d-3c14-4091-8c56-d04ced07a2b0"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -161,7 +152,7 @@ namespace Game
                     ""name"": ""Next"",
                     ""type"": ""Button"",
                     ""id"": ""b7230bb6-fc9b-4f52-8b25-f5e19cb2c2ba"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -537,28 +528,6 @@ namespace Game
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Interact"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4f4649ac-64a8-4a73-af11-b3faef356a4d"",
-                    ""path"": ""<Gamepad>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Crouch"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""36e52cba-0905-478e-a818-f4bfcb9f3b9a"",
-                    ""path"": ""<Keyboard>/c"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Crouch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1079,45 +1048,6 @@ namespace Game
                     ""isPartOfComposite"": false
                 }
             ]
-        },
-        {
-            ""name"": ""Game"",
-            ""id"": ""a49d46ac-249b-4f96-a858-267e6c196041"",
-            ""actions"": [
-                {
-                    ""name"": ""Navigation"",
-                    ""type"": ""Value"",
-                    ""id"": ""dd324544-7af8-447e-8509-086a5a09f6c6"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""329c2eee-e5bd-447b-8c21-57338ec1ec0f"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": ""SlowTap"",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Navigation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a02a971e-05f1-4bfa-bede-8d6ab42f7c9c"",
-                    ""path"": ""<Touchscreen>/primaryTouch/delta"",
-                    ""interactions"": ""SlowTap"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navigation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
         }
     ],
     ""controlSchemes"": [
@@ -1189,7 +1119,6 @@ namespace Game
             m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
             m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
             m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
-            m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
             m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
             m_Player_Previous = m_Player.FindAction("Previous", throwIfNotFound: true);
             m_Player_Next = m_Player.FindAction("Next", throwIfNotFound: true);
@@ -1206,16 +1135,12 @@ namespace Game
             m_UI_ScrollWheel = m_UI.FindAction("ScrollWheel", throwIfNotFound: true);
             m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
             m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
-            // Game
-            m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
-            m_Game_Navigation = m_Game.FindAction("Navigation", throwIfNotFound: true);
         }
 
         ~@InputActions()
         {
             UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, InputActions.Player.Disable() has not been called.");
             UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, InputActions.UI.Disable() has not been called.");
-            UnityEngine.Debug.Assert(!m_Game.enabled, "This will cause a leak and performance issues, InputActions.Game.Disable() has not been called.");
         }
 
         /// <summary>
@@ -1295,7 +1220,6 @@ namespace Game
         private readonly InputAction m_Player_Look;
         private readonly InputAction m_Player_Attack;
         private readonly InputAction m_Player_Interact;
-        private readonly InputAction m_Player_Crouch;
         private readonly InputAction m_Player_Jump;
         private readonly InputAction m_Player_Previous;
         private readonly InputAction m_Player_Next;
@@ -1327,10 +1251,6 @@ namespace Game
             /// Provides access to the underlying input action "Player/Interact".
             /// </summary>
             public InputAction @Interact => m_Wrapper.m_Player_Interact;
-            /// <summary>
-            /// Provides access to the underlying input action "Player/Crouch".
-            /// </summary>
-            public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
             /// <summary>
             /// Provides access to the underlying input action "Player/Jump".
             /// </summary>
@@ -1385,9 +1305,6 @@ namespace Game
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
-                @Crouch.started += instance.OnCrouch;
-                @Crouch.performed += instance.OnCrouch;
-                @Crouch.canceled += instance.OnCrouch;
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
@@ -1423,9 +1340,6 @@ namespace Game
                 @Interact.started -= instance.OnInteract;
                 @Interact.performed -= instance.OnInteract;
                 @Interact.canceled -= instance.OnInteract;
-                @Crouch.started -= instance.OnCrouch;
-                @Crouch.performed -= instance.OnCrouch;
-                @Crouch.canceled -= instance.OnCrouch;
                 @Jump.started -= instance.OnJump;
                 @Jump.performed -= instance.OnJump;
                 @Jump.canceled -= instance.OnJump;
@@ -1666,102 +1580,6 @@ namespace Game
         /// Provides a new <see cref="UIActions" /> instance referencing this action map.
         /// </summary>
         public UIActions @UI => new UIActions(this);
-
-        // Game
-        private readonly InputActionMap m_Game;
-        private List<IGameActions> m_GameActionsCallbackInterfaces = new List<IGameActions>();
-        private readonly InputAction m_Game_Navigation;
-        /// <summary>
-        /// Provides access to input actions defined in input action map "Game".
-        /// </summary>
-        public struct GameActions
-        {
-            private @InputActions m_Wrapper;
-
-            /// <summary>
-            /// Construct a new instance of the input action map wrapper class.
-            /// </summary>
-            public GameActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-            /// <summary>
-            /// Provides access to the underlying input action "Game/Navigation".
-            /// </summary>
-            public InputAction @Navigation => m_Wrapper.m_Game_Navigation;
-            /// <summary>
-            /// Provides access to the underlying input action map instance.
-            /// </summary>
-            public InputActionMap Get() { return m_Wrapper.m_Game; }
-            /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
-            public void Enable() { Get().Enable(); }
-            /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
-            public void Disable() { Get().Disable(); }
-            /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
-            public bool enabled => Get().enabled;
-            /// <summary>
-            /// Implicitly converts an <see ref="GameActions" /> to an <see ref="InputActionMap" /> instance.
-            /// </summary>
-            public static implicit operator InputActionMap(GameActions set) { return set.Get(); }
-            /// <summary>
-            /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
-            /// </summary>
-            /// <param name="instance">Callback instance.</param>
-            /// <remarks>
-            /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
-            /// </remarks>
-            /// <seealso cref="GameActions" />
-            public void AddCallbacks(IGameActions instance)
-            {
-                if (instance == null || m_Wrapper.m_GameActionsCallbackInterfaces.Contains(instance)) return;
-                m_Wrapper.m_GameActionsCallbackInterfaces.Add(instance);
-                @Navigation.started += instance.OnNavigation;
-                @Navigation.performed += instance.OnNavigation;
-                @Navigation.canceled += instance.OnNavigation;
-            }
-
-            /// <summary>
-            /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
-            /// </summary>
-            /// <remarks>
-            /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
-            /// </remarks>
-            /// <seealso cref="GameActions" />
-            private void UnregisterCallbacks(IGameActions instance)
-            {
-                @Navigation.started -= instance.OnNavigation;
-                @Navigation.performed -= instance.OnNavigation;
-                @Navigation.canceled -= instance.OnNavigation;
-            }
-
-            /// <summary>
-            /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="GameActions.UnregisterCallbacks(IGameActions)" />.
-            /// </summary>
-            /// <seealso cref="GameActions.UnregisterCallbacks(IGameActions)" />
-            public void RemoveCallbacks(IGameActions instance)
-            {
-                if (m_Wrapper.m_GameActionsCallbackInterfaces.Remove(instance))
-                    UnregisterCallbacks(instance);
-            }
-
-            /// <summary>
-            /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
-            /// </summary>
-            /// <remarks>
-            /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
-            /// </remarks>
-            /// <seealso cref="GameActions.AddCallbacks(IGameActions)" />
-            /// <seealso cref="GameActions.RemoveCallbacks(IGameActions)" />
-            /// <seealso cref="GameActions.UnregisterCallbacks(IGameActions)" />
-            public void SetCallbacks(IGameActions instance)
-            {
-                foreach (var item in m_Wrapper.m_GameActionsCallbackInterfaces)
-                    UnregisterCallbacks(item);
-                m_Wrapper.m_GameActionsCallbackInterfaces.Clear();
-                AddCallbacks(instance);
-            }
-        }
-        /// <summary>
-        /// Provides a new <see cref="GameActions" /> instance referencing this action map.
-        /// </summary>
-        public GameActions @Game => new GameActions(this);
         private int m_KeyboardMouseSchemeIndex = -1;
         /// <summary>
         /// Provides access to the input control scheme.
@@ -1862,13 +1680,6 @@ namespace Game
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnInteract(InputAction.CallbackContext context);
-            /// <summary>
-            /// Method invoked when associated input action "Crouch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnCrouch(InputAction.CallbackContext context);
             /// <summary>
             /// Method invoked when associated input action "Jump" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
             /// </summary>
@@ -1975,21 +1786,6 @@ namespace Game
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
-        }
-        /// <summary>
-        /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Game" which allows adding and removing callbacks.
-        /// </summary>
-        /// <seealso cref="GameActions.AddCallbacks(IGameActions)" />
-        /// <seealso cref="GameActions.RemoveCallbacks(IGameActions)" />
-        public interface IGameActions
-        {
-            /// <summary>
-            /// Method invoked when associated input action "Navigation" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnNavigation(InputAction.CallbackContext context);
         }
     }
 }

@@ -41,6 +41,11 @@ namespace Scenes.MainMenu
 			BindInstance(new MainMenuController());
 			
 		}
+		
+#if DEBUG
+		protected override void AddDebugOptions() { }
+#endif    
+		
 		public override void ResetComponentContainers(DataContainersController dataController)
 		{
 			

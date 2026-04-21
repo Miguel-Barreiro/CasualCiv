@@ -4,12 +4,11 @@ using Core.Model.ModelSystems;
 using Core.Zenject.Source.Main;
 using DebugUtils;
 using Game;
-using Game.Board;
 using Game.Entities;
 using Game.Input;
 using Game.UI;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 
 namespace Scenes.Play
@@ -18,8 +17,6 @@ namespace Scenes.Play
 	[Serializable]
 	public sealed class GameplayViewConfig
 	{
-		[SerializeField] private BoardViewConfig boardViewConfig;
-		public BoardViewConfig BoardViewConfig => boardViewConfig;
 
 		[SerializeField] private GameUIConfig gameUIConfig;
 		public GameUIConfig GameUIConfig => gameUIConfig;
@@ -41,10 +38,6 @@ namespace Scenes.Play
 		[SerializeField] private Camera _mainCamera;
 		public Camera MainCamera => _mainCamera;
 		
-		// [Space(10)] 
-		// [SerializeField] private InputActions _inputActions;
-		// public InputActions InputActions => _inputActions;
-
 	}
 
 	public sealed class GameplayBootstrap : SceneBootstrap
@@ -75,7 +68,13 @@ namespace Scenes.Play
 		{
 			BindInstance(GameplayViewConfig);
 			BindInstance(GameplayViewConfig.GameUIConfig);
+			BindInstance(new DefaultInputActions());
 		}
+		
+#if DEBUG
+		protected override void AddDebugOptions() { }
+#endif    
+
 
 		protected override void InstallSystems()
 		{
@@ -83,11 +82,8 @@ namespace Scenes.Play
 			GameEntity gameEntity = new GameEntity();
 			BindInstance(gameEntity);
 			
-			BindInstance(new BoardSystem());
-			BindInstance(new BoardViewSystem());
-
 			BindInstance(new EntitySpawnSystem());
-			
+			BindInstance(new PositionEntitiesSystem());
 			
 			BindInstance(new DebugGameplaySystem());
 			
@@ -96,7 +92,7 @@ namespace Scenes.Play
 			BindInstance(gameUIMessenger);
 			
 			BindInstance(new GameUISystem());
-			BindInstance(new TileInputSystem());
+			BindInstance(new GameInputSystem());
 
 			BindInstance(GameplayViewConfig.MainCamera);
 		}

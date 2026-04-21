@@ -1,23 +1,31 @@
 using Core.Model;
-using Game.Board;
+using Game.Input;
+using Global;
 using Zenject;
 
 namespace Game.Entities
 {
     public sealed class EntitySpawnSystem
     {
-        [Inject] private readonly BasicCompContainer<WorldEntityComponentData> WorldContainer;
-        [Inject] private readonly BoardSystem BoardSystem;
-        
+        [Inject] private readonly BasicCompContainer<PlayerData> PlayerContainer = null!;
+        [Inject] private readonly DebugConfig DebugConfig = null!;
+
+
+        public EntId SpawnPlayer(PlayerInputController playerInputController)
+        {
+            PlayerEntity newPlayer = new PlayerEntity(playerInputController, DebugConfig.TestPlayerEntityConfig);
+
+            return newPlayer.ID;
+        }
+
         public EntId SpawnEntity(EntityConfig config)
         {
-            WorldEntity entity = new WorldEntity();
 
-            ref WorldEntityComponentData worldEntity = ref WorldContainer.GetComponent(entity.ID);
-            worldEntity.ObjectType   = config.ObjectType;
-            worldEntity.Tile         = config.Tile;
+            // ref BoardEntityComponentData boardEntity = ref WorldContainer.GetComponent(entity.ID);
+            // boardEntity.ObjectType   = config.ObjectType;
+            // boardEntity.Tile         = config.Tile;
             
-            return entity.ID;
+            return EntId.Invalid;
         }
 
     }

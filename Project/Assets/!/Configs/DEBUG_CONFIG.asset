@@ -16,3 +16,4 @@ MonoBehaviour:
   name: Default Testing/Debuging Config
   testTile: {fileID: 11400000, guid: be101ddb89871b0448e229189dcfc556, type: 2}
   testEntityConfig: {fileID: 11400000, guid: cfb8ad3032ec9234da97c6e69008eda1, type: 2}
+  testPlayerEntityConfig: {fileID: 11400000, guid: 0124446de029b884892ec410bf60d927, type: 2}

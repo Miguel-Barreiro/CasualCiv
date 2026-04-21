@@ -14,9 +14,9 @@
       "dependencies": {
         "com.cysharp.unitask": "2.5.4",
         "com.unity.nuget.newtonsoft-json": "3.2.1 ",
-        "com.miguel.xnode": "1.8.2"
+        "com.miguel.xnode": "1.8.6"
       },
-      "hash": "3ba077b1f6cedf8bb97fcf9826c01b198f0cd668"
+      "hash": "1ed1fb4ea172d6e22ce48e2f94c7cb15ecc3220a"
     },
     "com.miguel.xnode": {
       "version": "https://github.com/Miguel-Barreiro/xNode.git",
@@ -149,6 +149,16 @@
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
         "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.cinemachine": {
+      "version": "3.1.6",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.splines": "2.0.0",
+        "com.unity.modules.imgui": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -327,6 +337,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.settings-manager": {
+      "version": "2.1.1",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.shadergraph": {
       "version": "17.3.0",
       "depth": 1,
@@ -335,6 +352,17 @@
         "com.unity.render-pipelines.core": "17.3.0",
         "com.unity.searcher": "4.9.3"
       }
+    },
+    "com.unity.splines": {
+      "version": "2.8.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.settings-manager": "1.0.3"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
       "version": "1.6.0",

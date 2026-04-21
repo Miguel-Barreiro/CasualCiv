@@ -30,6 +30,11 @@ namespace Game.Bootstrap
 		
 		}
 
+#if DEBUG
+		protected override void AddDebugOptions() { }
+#endif    
+
+		
 		public override void SetupConfigurations()
 		{
 		

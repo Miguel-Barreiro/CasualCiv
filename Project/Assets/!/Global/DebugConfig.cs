@@ -13,5 +13,10 @@ namespace Global
 		[SerializeField] private EntityConfig testEntityConfig;
 		public EntityConfig TestEntityConfig => testEntityConfig;
 		
+		
+		[SerializeField] private EntityConfig testPlayerEntityConfig;
+		public EntityConfig TestPlayerEntityConfig => testPlayerEntityConfig;
+		
+		
 	}
 }

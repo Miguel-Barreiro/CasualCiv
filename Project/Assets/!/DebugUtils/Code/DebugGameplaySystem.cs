@@ -1,6 +1,5 @@
 using Core.Model;
 using Core.Systems;
-using Game.Board;
 using Game.Entities;
 using Global;
 using Scenes.Play;
@@ -15,7 +14,6 @@ namespace DebugUtils
 		[Inject] private readonly GameplayViewConfig GameplayViewConfig = null!;
 		[Inject] private readonly DebugConfig DebugConfig = null!;
 
-		[Inject] private readonly BoardSystem BoardSystem = null!;
 		[Inject] private readonly EntitySpawnSystem EntitySpawnSystem = null!;
 
 
@@ -41,9 +39,9 @@ namespace DebugUtils
 
 		private void TestSpawnEntities()
 		{
-			Vector2Int position = new Vector2Int(-2, 0);
-			EntId newEntity = EntitySpawnSystem.SpawnEntity(DebugConfig.TestEntityConfig);
-			BoardSystem.AddEntity(newEntity, position);
+			// Vector2Int position = new Vector2Int(-2, 0);
+			// EntId newEntity = EntitySpawnSystem.SpawnEntity(DebugConfig.TestEntityConfig);
+			// BoardSystem.AddEntity(newEntity, position);
 		}
 
 	}

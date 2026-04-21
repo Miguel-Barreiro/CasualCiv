@@ -2,6 +2,7 @@ using Core.Initialization;
 using Core.Model.ModelSystems;
 using Core.View.UI;
 using Core.Zenject.Source.Main;
+using DebugUtils;
 using Game;
 using UnityEngine;
 using Zenject;
@@ -58,6 +59,12 @@ namespace Global.Logic
             MenusConfig = menusConfig;
         }
 
+        
+#if DEBUG
+        protected override void AddDebugOptions() { }
+#endif    
+
+        
         public override void SetupConfigurations()
         {
             // BouncyCoreStatsContainer bouncyCoreStatsContainer = GetSystem<BouncyCoreStatsContainer>();
@@ -72,6 +79,8 @@ namespace Global.Logic
             BindInstance<MenusConfig>(MenusConfig);
             BindInstance<DebugConfig>(DebugConfig);
             
+            
+            BindInstance(new DebugEnt());
             
 //             PreConfigGameplayOptionsSystem preConfigGameplayOptionsSystem = new PreConfigGameplayOptionsSystem();
 //             BindInstance(preConfigGameplayOptionsSystem);

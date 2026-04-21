@@ -7,5 +7,7 @@ namespace Global
 	{
 		[SerializeField] private Vector2 _tileSize = Vector2.one;
 		public Vector2 TileSize => _tileSize;
+		
+		
 	}
 }
