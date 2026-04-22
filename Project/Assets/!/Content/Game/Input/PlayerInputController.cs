@@ -34,15 +34,35 @@ namespace Game.Input
 			MovePlayerEvent movePlayerEvent = EntityEventQueue.Execute<MovePlayerEvent>(EntityID);
 			Vector2 readValue = moveValue.ReadValue<Vector2>();
 			movePlayerEvent.Direction = new FixVec2(readValue.x, readValue.y);
-			transform.Translate(new Vector3(readValue.x, readValue.y, 0));
+			// transform.Translate(new Vector3(readValue.x, readValue.y, 0));
 		}
 
 		public void OnAim(InputAction.CallbackContext aimValue)
 		{
+			AimPlayerEvent aimPlayerEvent = EntityEventQueue.Execute<AimPlayerEvent>(EntityID);
+			Vector2 readValue = aimValue.ReadValue<Vector2>();
+			aimPlayerEvent.AimPosition = new FixVec2(readValue.x, readValue.y);
+		}
+
+		public void OnSprint(InputAction.CallbackContext sprintValue)
+		{
 			
 		}
 
+		public void OnJump(InputAction.CallbackContext jumpValue)
+		{
+			
+		}
 
+		public void OnDash(InputAction.CallbackContext dashValue)
+		{
+			
+		}
+		
+		public void OnAttack(InputAction.CallbackContext attackValue)
+		{
+		}
+		
 
 	}
 }

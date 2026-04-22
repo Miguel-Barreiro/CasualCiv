@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: _0fJdYaqXt3
   name: Speed_Stat
   defaultBaseValue: 1
-  defaultMaxValue: 100
+  defaultMaxValue: 999
   defaultMinValue: 0
   description: 
   canOverflow: 0

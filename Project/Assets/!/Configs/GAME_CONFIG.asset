@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameAssemblyDef::Global.GameConfig
   Id: vgm2eUsyIyL
   name: Game Config
+  _tileSize: {x: 1, y: 1}
+  InputConfig:
+    _targetMaxDistance: 1.73
+    _targetMinDistance: 0
+    _targetMoveSpeed: 0.1

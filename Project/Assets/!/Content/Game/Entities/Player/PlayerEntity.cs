@@ -2,12 +2,15 @@ using System.Runtime.InteropServices;
 using Core.Model;
 using Core.Model.ModelSystems;
 using Core.View;
+using FixedPointy;
 using Game.Input;
 using UnityEngine;
 
 namespace Game.Entities
 {
-	public sealed class PlayerEntity : Entity, IPlayer
+	public sealed class PlayerEntity : Entity, 
+										IPlayer, 
+										IPositionComponent
 	{
 		public PlayerEntity(PlayerInputController playerInputController, EntityConfig config)
 		{
@@ -28,16 +31,19 @@ namespace Game.Entities
 	[StructLayout(LayoutKind.Auto)]
 	public struct PlayerData : IComponentData
 	{
+		public FixVec2 AimPosition;
 		public PlayerInputController PlayerInputController;
 
 		public EntId ID { get; set; }
-		
 
-		public void Init() { }
+
+		public void Init()
+		{
+			AimPosition = FixVec2.Zero;
+		}
 	}
 
-	public interface IPlayer : IPositionComponent, 
-								Component<PlayerData> { }
+	public interface IPlayer : IPositionComponent, Component<PlayerData> { }
 	
 	
 }

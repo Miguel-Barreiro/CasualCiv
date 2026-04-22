@@ -6,6 +6,7 @@ using Core.Utils;
 using Core.View;
 using DebugUtils;
 using FixedPointy;
+using UnityEngine;
 using Zenject;
 
 namespace Game.Entities
@@ -39,6 +40,7 @@ namespace Game.Entities
 		
 		public void UpdateComponents(float deltaTime)
 		{
+			Vector2 speedV2 = new Vector2(1, 0);
 			uint topIndex = PositionComponentContainer.TopEmptyIndex;
 			for (int i = 0; i < topIndex; i++)
 			{
@@ -53,8 +55,16 @@ namespace Game.Entities
 				}
 				
 				Fix speed = StatsSystem.GetStatValue(entityId, GameStatsContainer.Speed);
-				componentData.Position += componentData.MoveDirection * speed * deltaTime ;
-				entityViewAtributes.GameObject.transform.position = componentData.Position.ToVector3();
+				// componentData.Position += componentData.MoveDirection * speed * deltaTime;
+				Rigidbody2D rigidbody2D = entityViewAtributes.Get<Rigidbody2D>();
+				
+				speedV2.x = (float) (componentData.MoveDirection.X * speed * 100);
+				speedV2.y = (float) (componentData.MoveDirection.Y * speed* 100);
+				
+				rigidbody2D.AddForce(speedV2, ForceMode2D.Force);
+				
+				// rigidbody2D.linearVelocity = (componentData.MoveDirection * speed).ToVector2();
+				// entityViewAtributes.GameObject.transform.position = componentData.Position.ToVector3();
 			}
 
 		}

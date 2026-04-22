@@ -1,8 +1,7 @@
+using System.Collections.Generic;
 using Core.Model.Data;
-using Game;
-using Sirenix.OdinInspector;
+using Core.Model.Stats;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace Game.Entities
 {
@@ -11,5 +10,17 @@ namespace Game.Entities
     {
         public GameObject Prefab;
 
+
+        [Space]
+        public List<StatOverride> StatOverrides;
+        [Space, Range(1.5f, 4f)]
+        [SerializeField] private float _PlayerCameraClearanceRadius = 2;
+
+        
+        
+        public float PlayerCameraClearanceRadius => _PlayerCameraClearanceRadius;
     }
+    
+    
+    
 }

@@ -78,6 +78,7 @@ namespace Global.Logic
             BindInstance<GameConfig>(GameConfig);
             BindInstance<MenusConfig>(MenusConfig);
             BindInstance<DebugConfig>(DebugConfig);
+            BindInstance(GameConfig.InputConfig);
             
             
             BindInstance(new DebugEnt());

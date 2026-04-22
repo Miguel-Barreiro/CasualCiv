@@ -15,3 +15,8 @@ MonoBehaviour:
   Id: 8W5wvDVUwRH
   name: test Player Config
   Prefab: {fileID: 4842999017715304294, guid: 27dc824f188fadb4fbc903e902f71f1f, type: 3}
+  StatOverrides:
+  - _statConfig: {fileID: 11400000, guid: d06f331f9c64bce4e8883f9e0d9380dc, type: 2}
+    _value: 30
+    _overrideType: 0
+  _PlayerCameraClearanceRadius: 2

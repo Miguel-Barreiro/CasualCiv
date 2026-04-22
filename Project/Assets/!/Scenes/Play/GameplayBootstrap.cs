@@ -7,6 +7,7 @@ using Game;
 using Game.Entities;
 using Game.Input;
 using Game.UI;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
@@ -23,21 +24,25 @@ namespace Scenes.Play
 
 		[Space(10)]
 		[SerializeField] private Tilemap groundTilemap;
-		public Tilemap GroundTilemap => groundTilemap;
-
 		[SerializeField] private Tilemap surfaceTilemap;
-		public Tilemap SurfaceTilemap => surfaceTilemap;
-		
 		[SerializeField] private Tilemap objectsTilemap;
-		public Tilemap ObjectsTilemap => objectsTilemap;
-		
 		[SerializeField] private Tilemap airTilemap;
-		public Tilemap AirTilemap => airTilemap;
 		
 		[Space(10)]
 		[SerializeField] private Camera _mainCamera;
-		public Camera MainCamera => _mainCamera;
+		[SerializeField] private CinemachineTargetGroup _CinemachineTargetGroup;
+		[SerializeField] private CinemachineCamera _cinemachineCamera;
+		[SerializeField] private PlayerInputManager _PlayerInputManagerPrefab;
+
 		
+		public Tilemap GroundTilemap => groundTilemap;
+		public Tilemap SurfaceTilemap => surfaceTilemap;
+		public Tilemap ObjectsTilemap => objectsTilemap;
+		public Tilemap AirTilemap => airTilemap;
+		public CinemachineCamera CinemachineCamera => _cinemachineCamera;
+		public Camera MainCamera => _mainCamera;
+		public CinemachineTargetGroup CinemachineTargetGroup => _CinemachineTargetGroup;
+		public PlayerInputManager PlayerInputManagerPrefab => _PlayerInputManagerPrefab;
 	}
 
 	public sealed class GameplayBootstrap : SceneBootstrap
@@ -95,6 +100,12 @@ namespace Scenes.Play
 			BindInstance(new GameInputSystem());
 
 			BindInstance(GameplayViewConfig.MainCamera);
+			BindInstance(GameplayViewConfig.CinemachineCamera);
+			BindInstance(GameplayViewConfig.CinemachineTargetGroup);
+			CinemachineBasicMultiChannelPerlin cinemachineNoise = GameplayViewConfig.CinemachineCamera.gameObject.GetComponent<CinemachineBasicMultiChannelPerlin>();
+			BindInstance(cinemachineNoise);
+			
+			InstantiatePrefabAndBind<PlayerInputManager>(GameplayViewConfig.PlayerInputManagerPrefab);
 		}
 
 		public override void ResetComponentContainers(DataContainersController dataController)
