@@ -6,6 +6,7 @@ using Core.Utils;
 using Core.View;
 using DebugUtils;
 using FixedPointy;
+using Global;
 using UnityEngine;
 using Zenject;
 
@@ -37,6 +38,8 @@ namespace Game.Entities
 		[Inject] private readonly StatsSystem StatsSystem = null!;
 		[Inject] private readonly GameStatsContainer GameStatsContainer = null!;
 		[Inject] private readonly DebugEnt DebugEnt = null!;
+		[Inject] private readonly MovementConfig MovementConfig = null!;
+
 		
 		public void UpdateComponents(float deltaTime)
 		{
@@ -58,11 +61,18 @@ namespace Game.Entities
 				// componentData.Position += componentData.MoveDirection * speed * deltaTime;
 				Rigidbody2D rigidbody2D = entityViewAtributes.Get<Rigidbody2D>();
 				
-				speedV2.x = (float) (componentData.MoveDirection.X * speed * 100);
-				speedV2.y = (float) (componentData.MoveDirection.Y * speed* 100);
+				speedV2.x = (float) (componentData.MoveDirection.X * speed * 10);
+				speedV2.y = (float) (componentData.MoveDirection.Y * speed* 10);
 				
 				rigidbody2D.AddForce(speedV2, ForceMode2D.Force);
-				
+
+				Fix magnitude = componentData.MoveDirection.GetMagnitude();
+				if (magnitude < 0.1f)
+					rigidbody2D.mass = MovementConfig.PlayerRestMass;
+				else
+					rigidbody2D.mass = MovementConfig.PlayerMovingMass;
+
+
 				// rigidbody2D.linearVelocity = (componentData.MoveDirection * speed).ToVector2();
 				// entityViewAtributes.GameObject.transform.position = componentData.Position.ToVector3();
 			}

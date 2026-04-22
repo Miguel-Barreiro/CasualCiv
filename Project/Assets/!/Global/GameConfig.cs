@@ -11,7 +11,10 @@ namespace Global
 		
 		[SerializeField]
 		public InputConfig InputConfig;
-		
+
+		[SerializeField] 
+		public MovementConfig MovementConfig;
+
 	}
 
 	[Serializable]
@@ -28,6 +31,19 @@ namespace Global
 		public float TargetMaxDistance => _targetMaxDistance;
 
 		public float TargetMoveSpeed => _targetMoveSpeed;
+	}
+
+	[Serializable]
+	public sealed class MovementConfig
+	{
+		[SerializeField, Range(1, 500)] 
+		private float _playerRestMass = 500;
+		[SerializeField, Range(1, 100)] 
+		private float _playerMovingMass = 5;
+		
+		public float PlayerMovingMass => _playerMovingMass;
+		public float PlayerRestMass => _playerRestMass;
+		
 	}
 
 }
