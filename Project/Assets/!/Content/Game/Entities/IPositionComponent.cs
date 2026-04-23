@@ -56,17 +56,17 @@ namespace Game.Entities
 					DebugEnt.LogError($"no gameobject set", entityId);
 					continue;
 				}
-				
+				FixVec2 direction = componentData.MoveDirection.Normalize();
 				Fix speed = StatsSystem.GetStatValue(entityId, GameStatsContainer.Speed);
 				// componentData.Position += componentData.MoveDirection * speed * deltaTime;
 				Rigidbody2D rigidbody2D = entityViewAtributes.Get<Rigidbody2D>();
-				
-				speedV2.x = (float) (componentData.MoveDirection.X * speed * 10);
-				speedV2.y = (float) (componentData.MoveDirection.Y * speed* 10);
+
+				speedV2.x = (float) (direction.X * speed * 10);
+				speedV2.y = (float) (direction.Y * speed* 10);
 				
 				rigidbody2D.AddForce(speedV2, ForceMode2D.Force);
 
-				Fix magnitude = componentData.MoveDirection.GetMagnitude();
+				Fix magnitude = direction.GetMagnitude();
 				if (magnitude < 0.1f)
 					rigidbody2D.mass = MovementConfig.PlayerRestMass;
 				else

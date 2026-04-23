@@ -34,6 +34,7 @@ namespace Game.Entities
             EntityViewAtributes? entityViewAtributes = ViewEntitiesContainer.GetEntityViewAtributes(newPlayer.ID);
             if (entityViewAtributes != null && entityViewAtributes.GameObject != null)
             {
+                GameplayViewConfig.CinemachineTargetGroup.RemoveMember(GameplayViewConfig.PlayerSpawnPoint.transform);
                 GameplayViewConfig.CinemachineTargetGroup.AddMember(entityViewAtributes.GameObject.transform, 1, 
                                                                     playerEntityConfig.PlayerCameraClearanceRadius);
             }

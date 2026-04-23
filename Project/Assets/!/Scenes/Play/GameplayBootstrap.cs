@@ -5,6 +5,7 @@ using Core.Zenject.Source.Main;
 using DebugUtils;
 using Game;
 using Game.Entities;
+using Game.Entities.Spawnpoints;
 using Game.Input;
 using Game.UI;
 using Unity.Cinemachine;
@@ -34,7 +35,9 @@ namespace Scenes.Play
 		[SerializeField] private CinemachineCamera _cinemachineCamera;
 		[SerializeField] private PlayerInputManager _PlayerInputManagerPrefab;
 
+		[SerializeField] private SpawnpointView _PlayerSpawnPoint;
 		
+		public SpawnpointView PlayerSpawnPoint => _PlayerSpawnPoint;
 		public Tilemap GroundTilemap => groundTilemap;
 		public Tilemap SurfaceTilemap => surfaceTilemap;
 		public Tilemap ObjectsTilemap => objectsTilemap;
