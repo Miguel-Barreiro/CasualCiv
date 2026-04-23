@@ -14,6 +14,8 @@ namespace Game.Input
 	{
 		[Inject] private readonly EventQueue EventQueue = null!;
 
+		[Inject] private readonly BasicCompContainer<PlayerData> PlayerContainer = null!;
+
 		public EntId EntityID { get; private set; } = EntId.Invalid;
 
 		public void SetEntity(EntId entId)
@@ -46,7 +48,21 @@ namespace Game.Input
 
 		public void OnSprint(InputAction.CallbackContext sprintValue)
 		{
-			
+			bool pressingSprinting = sprintValue.ReadValueAsButton();
+			if (PlayerContainer.GetComponent(EntityID).isSprinting)
+			{
+				if (!pressingSprinting)
+				{
+					SprintEndPlayerEvent sprintEndPlayerEvent = EntityEventQueue.Execute<SprintEndPlayerEvent>(EntityID);
+				}
+			} else
+			{
+				if (!pressingSprinting)
+				{
+					SprintStartPlayerEvent sprintStartPlayerEvent = EntityEventQueue.Execute<SprintStartPlayerEvent>(EntityID);
+				}
+			}
+
 		}
 
 		public void OnJump(InputAction.CallbackContext jumpValue)

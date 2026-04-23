@@ -17,6 +17,8 @@ namespace Game.Entities
 			ref PlayerData playerData = ref PlayerContainer.GetComponent(EntityID);
 			playerData.AimPosition = AimPosition;
 			
+			
+			
 		}
 	}
 }

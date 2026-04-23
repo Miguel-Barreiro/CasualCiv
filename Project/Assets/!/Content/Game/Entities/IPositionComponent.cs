@@ -16,7 +16,7 @@ namespace Game.Entities
 	[StructLayout(LayoutKind.Auto)]
 	public struct PositionComponentData : IComponentData
 	{
-		public FixVec2 Position;
+		public Vector2 Position;
 		public FixVec2 MoveDirection;
 		
 		public EntId ID { get; set; }
@@ -24,7 +24,7 @@ namespace Game.Entities
 		public void Init()
 		{
 			MoveDirection = FixVec2.Zero;
-			Position = FixVec2.Zero;
+			Position = Vector2.zero;
 		}
 	}
 
@@ -58,21 +58,15 @@ namespace Game.Entities
 				}
 				FixVec2 direction = componentData.MoveDirection.Normalize();
 				Fix speed = StatsSystem.GetStatValue(entityId, GameStatsContainer.Speed);
-				// componentData.Position += componentData.MoveDirection * speed * deltaTime;
 				Rigidbody2D rigidbody2D = entityViewAtributes.Get<Rigidbody2D>();
 
 				speedV2.x = (float) (direction.X * speed * 10);
 				speedV2.y = (float) (direction.Y * speed* 10);
 				
 				rigidbody2D.AddForce(speedV2, ForceMode2D.Force);
-
-				Fix magnitude = direction.GetMagnitude();
-				if (magnitude < 0.1f)
-					rigidbody2D.mass = MovementConfig.PlayerRestMass;
-				else
-					rigidbody2D.mass = MovementConfig.PlayerMovingMass;
-
-
+				// componentData.Position += componentData.MoveDirection * speed * deltaTime;
+				componentData.Position = entityViewAtributes.GameObject.transform.position;
+				
 				// rigidbody2D.linearVelocity = (componentData.MoveDirection * speed).ToVector2();
 				// entityViewAtributes.GameObject.transform.position = componentData.Position.ToVector3();
 			}

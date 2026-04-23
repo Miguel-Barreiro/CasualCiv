@@ -41,9 +41,17 @@ namespace Global
 		[SerializeField, Range(1, 100)] 
 		private float _playerMovingMass = 5;
 		
+		[SerializeField, Range(5, 40)]
+		private float _walkSpeed = 15f;
+
+		[SerializeField, Range(10, 40)]
+		private float _sprintSpeed = 30f;
+		
+		
 		public float PlayerMovingMass => _playerMovingMass;
 		public float PlayerRestMass => _playerRestMass;
-		
+		public float WalkSpeed => _walkSpeed;
+		public float SprintSpeed => _sprintSpeed;
 	}
 
 }

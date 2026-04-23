@@ -102,6 +102,8 @@ namespace Scenes.Play
 			BindInstance(new GameUISystem());
 			BindInstance(new GameInputSystem());
 
+			BindInstance(new PlayerSystem());
+			
 			BindInstance(GameplayViewConfig.MainCamera);
 			BindInstance(GameplayViewConfig.CinemachineCamera);
 			BindInstance(GameplayViewConfig.CinemachineTargetGroup);
