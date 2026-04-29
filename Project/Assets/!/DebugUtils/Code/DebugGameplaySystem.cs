@@ -26,15 +26,18 @@ namespace DebugUtils
 		
 		private void TestFillTiles()
 		{
-			Vector3Int position = Vector3Int.zero;
-			TileBase testTile = DebugConfig.TestTile;
-			GameplayViewConfig.ObjectsTilemap.SetTile(position, testTile);
-			GameplayViewConfig.ObjectsTilemap.SetTile(position + new Vector3Int(0, 0), testTile);
-			GameplayViewConfig.ObjectsTilemap.SetTile(position + new Vector3Int(0, 1), testTile);
-			GameplayViewConfig.ObjectsTilemap.SetTile(position + new Vector3Int(1, 0), testTile);
-			GameplayViewConfig.ObjectsTilemap.SetTile(position + new Vector3Int(1, 1), testTile);
-			GameplayViewConfig.ObjectsTilemap.SetTile(position + new Vector3Int(1, 2), testTile);
-			GameplayViewConfig.ObjectsTilemap.SetTile(position + new Vector3Int(2, 1), testTile);
+			// TileBase
+			// GameplayViewConfig.ObjectsTilemap.GetTile()
+			
+			// Vector3Int position = Vector3Int.zero;
+			// TileBase testTile = DebugConfig.TestTile;
+			// GameplayViewConfig.ObjectsTilemap.SetTile(position, testTile);
+			// GameplayViewConfig.ObjectsTilemap.SetTile(position + new Vector3Int(0, 0), testTile);
+			// GameplayViewConfig.ObjectsTilemap.SetTile(position + new Vector3Int(0, 1), testTile);
+			// GameplayViewConfig.ObjectsTilemap.SetTile(position + new Vector3Int(1, 0), testTile);
+			// GameplayViewConfig.ObjectsTilemap.SetTile(position + new Vector3Int(1, 1), testTile);
+			// GameplayViewConfig.ObjectsTilemap.SetTile(position + new Vector3Int(1, 2), testTile);
+			// GameplayViewConfig.ObjectsTilemap.SetTile(position + new Vector3Int(2, 1), testTile);
 		}
 
 		private void TestSpawnEntities()
