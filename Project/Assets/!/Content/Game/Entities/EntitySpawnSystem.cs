@@ -2,9 +2,11 @@
 using Core.Model;
 using Core.Model.Stats;
 using Core.View;
+using Game.Entities.Board;
 using Game.Input;
 using Global;
 using Scenes.Play;
+using UnityEngine;
 using Zenject;
 
 namespace Game.Entities
@@ -53,5 +55,10 @@ namespace Game.Entities
             return EntId.Invalid;
         }
 
+        public EntId SpawnTile(CustomTile tile, Vector2Int Position, GameObject go)
+        {
+            TileEntity tileEntity = new TileEntity();
+            return tileEntity.ID;
+        }
     }
 }

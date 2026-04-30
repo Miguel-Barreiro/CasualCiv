@@ -5,6 +5,7 @@ using Core.Zenject.Source.Main;
 using DebugUtils;
 using Game;
 using Game.Entities;
+using Game.Entities.Board;
 using Game.Entities.Spawnpoints;
 using Game.Input;
 using Game.UI;
@@ -23,11 +24,6 @@ namespace Scenes.Play
 		[SerializeField] private GameUIConfig gameUIConfig;
 		public GameUIConfig GameUIConfig => gameUIConfig;
 
-		[Space(10)]
-		[SerializeField] private Tilemap groundTilemap;
-		[SerializeField] private Tilemap surfaceTilemap;
-		[SerializeField] private Tilemap objectsTilemap;
-		[SerializeField] private Tilemap airTilemap;
 		
 		[Space(10)]
 		[SerializeField] private Camera _mainCamera;
@@ -37,15 +33,15 @@ namespace Scenes.Play
 
 		[SerializeField] private SpawnpointView _PlayerSpawnPoint;
 		
+		[SerializeField] private BoardView _GridPrefab;
+		
 		public SpawnpointView PlayerSpawnPoint => _PlayerSpawnPoint;
-		public Tilemap GroundTilemap => groundTilemap;
-		public Tilemap SurfaceTilemap => surfaceTilemap;
-		public Tilemap ObjectsTilemap => objectsTilemap;
-		public Tilemap AirTilemap => airTilemap;
 		public CinemachineCamera CinemachineCamera => _cinemachineCamera;
 		public Camera MainCamera => _mainCamera;
 		public CinemachineTargetGroup CinemachineTargetGroup => _CinemachineTargetGroup;
 		public PlayerInputManager PlayerInputManagerPrefab => _PlayerInputManagerPrefab;
+		
+		public BoardView GridPrefab => _GridPrefab;
 	}
 
 	public sealed class GameplayBootstrap : SceneBootstrap
@@ -103,6 +99,8 @@ namespace Scenes.Play
 			BindInstance(new GameInputSystem());
 
 			BindInstance(new PlayerSystem());
+			BindInstance(new BoardSystem());
+			
 			
 			BindInstance(GameplayViewConfig.MainCamera);
 			BindInstance(GameplayViewConfig.CinemachineCamera);
@@ -111,6 +109,7 @@ namespace Scenes.Play
 			BindInstance(cinemachineNoise);
 			
 			InstantiatePrefabAndBind<PlayerInputManager>(GameplayViewConfig.PlayerInputManagerPrefab);
+			
 		}
 
 		public override void ResetComponentContainers(DataContainersController dataController)
