@@ -6,6 +6,7 @@ using DebugUtils;
 using Game;
 using Game.Entities;
 using Game.Entities.Board;
+using Game.Entities.Enemies;
 using Game.Entities.Spawnpoints;
 using Game.Input;
 using Game.UI;
@@ -100,7 +101,7 @@ namespace Scenes.Play
 
 			BindInstance(new PlayerSystem());
 			BindInstance(new BoardSystem());
-			
+			BindInstance(new EnemiesSystem());	
 			
 			BindInstance(GameplayViewConfig.MainCamera);
 			BindInstance(GameplayViewConfig.CinemachineCamera);

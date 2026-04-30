@@ -6,19 +6,16 @@ using UnityEngine;
 namespace Game.Entities
 {
     [CreateAssetMenu(fileName = "New EntityConfig", menuName = "Game/Entities/EntityConfig")]
-    public sealed class EntityConfig : DataConfig
+    public class EntityConfig : DataConfig
     {
         public GameObject Prefab;
-
-
+        
         [Space]
         public List<StatOverride> StatOverrides;
-        [Space, Range(1.5f, 4f)]
-        [SerializeField] private float _PlayerCameraClearanceRadius = 2;
-
         
+        [Space]
+        public List<VSAbilityDataConfig> Abilities;
         
-        public float PlayerCameraClearanceRadius => _PlayerCameraClearanceRadius;
     }
     
     

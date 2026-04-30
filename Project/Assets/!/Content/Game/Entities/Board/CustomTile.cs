@@ -1,5 +1,8 @@
+using System.Runtime.InteropServices;
 using Core.Events;
 using Core.Model;
+using Core.Model.ModelSystems;
+using Core.Zenject.Source.Internal;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Zenject;
@@ -20,7 +23,6 @@ namespace Game.Entities.Board
 		public IBoardSystem.TileType Type => _TileType;
 
 		
-
 		public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
 		{
 			tileData.sprite = _Sprite;
@@ -55,10 +57,29 @@ namespace Game.Entities.Board
 		
 	}
 
+	[StructLayout(LayoutKind.Auto)]
+	public struct TileComponentData : IComponentData
+	{
+		public EntId ID { get; set; }
+
+		public BlockType BlockType;
+		public IBoardSystem.TileType TileType;
+
+		public void Init()
+		{
+			BlockType = BlockType.FullBlock;
+			TileType = IBoardSystem.TileType.Ground;
+		}
+	}
+
+	public interface ITile : Component<TileComponentData> { }
+
 	public sealed class SetupTileEvent : Event<SetupTileEvent>
 	{
 		[Inject] private readonly BoardSystem BoardSystem = null!;
 		[Inject] private readonly EntitySpawnSystem EntitySpawnSystem = null!;
+		// [Inject] private readonly EntitiesContainer EntitiesContainer = null!;
+
 		
 		public Vector2Int Position;
 		public CustomTile Tile;
@@ -67,11 +88,15 @@ namespace Game.Entities.Board
 		
 		public override void Execute()
 		{
-			
 			EntId newTile = EntitySpawnSystem.SpawnTile(Tile, Position, go);
-			BoardSystem.AddEntity(newTile, Position, Tile);
-			
-			Debug.Log($"new custom tile {Position} {Tile.Sprite.name} {go}");			
+			EntId previousEnt = BoardSystem.AddEntity(newTile, Position, Tile);
+
+			if (previousEnt != EntId.Invalid)
+			{
+				Log($"Replacing tile ({previousEnt}) -> {Tile.name} ({newTile})");
+				EntitiesContainer.DestroyEntity(previousEnt);
+			}
+			// Debug.Log($"new custom tile {Position} {Tile.Sprite.name} {go}");			
 		}
 	}
 

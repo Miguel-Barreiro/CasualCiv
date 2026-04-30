@@ -16,7 +16,7 @@
         "com.unity.nuget.newtonsoft-json": "3.2.1 ",
         "com.miguel.xnode": "1.8.6"
       },
-      "hash": "6b72d9d1db705233eed47a3d81a83cc00b35412f"
+      "hash": "3cf574d229809bbf6ecd4cdfffeb687748eb963c"
     },
     "com.miguel.xnode": {
       "version": "https://github.com/Miguel-Barreiro/xNode.git",

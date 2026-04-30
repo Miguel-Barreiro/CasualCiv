@@ -1,8 +1,13 @@
 #nullable enable
+using System.Collections.Generic;
 using Core.Model;
+using Core.Model.Data;
 using Core.Model.Stats;
 using Core.View;
+using Core.VSEngine;
+using FixedPointy;
 using Game.Entities.Board;
+using Game.Entities.Enemies;
 using Game.Input;
 using Global;
 using Scenes.Play;
@@ -20,6 +25,8 @@ namespace Game.Entities
         [Inject] private readonly GameplayViewConfig GameplayViewConfig = null!;
 
         [Inject] private readonly ViewEntitiesContainer ViewEntitiesContainer = null!;
+        [Inject] private readonly VSAbilitySystem VSAbilitySystem = null!;
+
 
 
 
@@ -32,6 +39,7 @@ namespace Game.Entities
             foreach ( StatOverride statOverride in playerEntityConfig.StatOverrides)
                 StatsSystem.SetBaseValue(newPlayer.ID, statOverride.StatConfig, statOverride.Value);
 
+            AddAbilities(newPlayer.ID, playerEntityConfig.Abilities);
             
             // EntityViewAtributes? entityViewAtributes = ViewEntitiesContainer.GetEntityViewAtributes(newPlayer.ID);
             // if (entityViewAtributes != null && entityViewAtributes.GameObject != null)
@@ -43,6 +51,48 @@ namespace Game.Entities
 
             
             return newPlayer.ID;
+        }
+
+        public EntId SpawnEnemy(EnemyConfig config)
+        {
+            EnemyEntity newEnemy = new EnemyEntity(config);
+            
+            foreach ( StatOverride statOverride in config.StatOverrides)
+                StatsSystem.SetBaseValue(newEnemy.ID, statOverride.StatConfig, statOverride.Value);
+
+            AddAbilities(newEnemy.ID, config.Abilities);
+            
+            return newEnemy.ID;
+        }
+
+        private void AddAbilities(EntId parent, List<VSAbilityDataConfig> configAbilities)
+        {
+            foreach (VSAbilityDataConfig vsAbilityDataConfig in configAbilities)
+            {
+                VSAbility newAbility = new VSAbility(parent, vsAbilityDataConfig);
+                
+                foreach (StatOverride statOverride in vsAbilityDataConfig.StatsOverride)
+                {
+                    switch (statOverride.OverrideType)
+                    {
+                        case OverrideType.Additive:
+                            Fix parentValue = StatsSystem.GetStatValue(parent, statOverride.StatConfig);
+                            StatsSystem.SetBaseValue(newAbility.ID, statOverride.StatConfig, parentValue);
+                            StatsSystem.AddModifier(newAbility.ID, newAbility.ID, statOverride.StatConfig, 
+                                                    statOverride.Value, StatModifierType.Additive);
+                            break;
+                        case OverrideType.Override:
+                            StatsSystem.SetBaseValue(newAbility.ID, statOverride.StatConfig, statOverride.Value);
+                            break;
+                        case OverrideType.Multiplicative:
+                            parentValue = StatsSystem.GetStatValue(parent, statOverride.StatConfig);
+                            StatsSystem.SetBaseValue(newAbility.ID, statOverride.StatConfig, parentValue);
+                            StatsSystem.AddModifier(newAbility.ID, newAbility.ID, statOverride.StatConfig, 
+                                                    statOverride.Value, StatModifierType.Multiplicative);
+                            break;
+                    } 
+                }
+            }
         }
 
         public EntId SpawnEntity(EntityConfig config)
