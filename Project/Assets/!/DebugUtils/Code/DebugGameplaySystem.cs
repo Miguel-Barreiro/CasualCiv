@@ -1,6 +1,7 @@
 using Core.Model;
 using Core.Systems;
 using Game.Entities;
+using Game.Entities.Enemies;
 using Global;
 using Scenes.Play;
 using UnityEngine;
@@ -26,6 +27,37 @@ namespace DebugUtils
 		
 		private void TestFillTiles()
 		{
+			UnitConfig debugConfigTestUnitConfig = DebugConfig.TestUnitConfig;
+			
+			DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsRight.ForEach(SpawnEnemy);
+
+
+			void SpawnEnemy(Vector2Int tilePosition)
+			{
+				debugConfigTestUnitConfig = debugConfigTestUnitConfig == DebugConfig.TestUnitConfig? 
+												DebugConfig.TestSpeedyUnitConfig : 
+												DebugConfig.TestUnitConfig;
+				EntitySpawnSystem.SpawnUnit(debugConfigTestUnitConfig, tilePosition, true);
+
+			}
+
+			// EntitySpawnSystem.SpawnEnemy(DebugConfig.TestEntityConfig);
+			
+			
 			// TileBase
 			// GameplayViewConfig.ObjectsTilemap.GetTile()
 			

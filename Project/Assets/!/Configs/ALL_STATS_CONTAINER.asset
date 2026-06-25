@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: ALL_STATS_CONTAINER
   m_EditorClassIdentifier: GameAssemblyDef::Game.GameStatsContainer
   _speed: {fileID: 11400000, guid: d06f331f9c64bce4e8883f9e0d9380dc, type: 2}
+  _cooldown: {fileID: 11400000, guid: 476e3914f5cf02f458926f5dc561490c, type: 2}
+  _LifeTimer: {fileID: 11400000, guid: 834ebd6882d0a8748baceee99cf28451, type: 2}
+  _Health: {fileID: 11400000, guid: f06013e54089df9469533e861a6174b8, type: 2}

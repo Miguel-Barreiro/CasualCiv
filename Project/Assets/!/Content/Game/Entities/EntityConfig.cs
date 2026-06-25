@@ -11,10 +11,10 @@ namespace Game.Entities
         public GameObject Prefab;
         
         [Space]
-        public List<StatOverride> StatOverrides;
+        public StatOverride[] StatOverrides;
         
         [Space]
-        public List<VSAbilityDataConfig> Abilities;
+        public VSAbilityDataConfig[] Abilities;
         
     }
     

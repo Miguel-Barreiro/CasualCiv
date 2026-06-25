@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371c348ad7ea430fa6853bb64ae6495d, type: 3}
+  m_Name: TestSpawnerConfig
+  m_EditorClassIdentifier: GameAssemblyDef::Game.Entities.Spawners.SpawnerConfig
+  Id: 9kBfY7r9u_b
+  name: TestSpawnerConfig
+  Prefab: {fileID: 3805287440952699709, guid: 8bda2d562fa4fa34d968d7cad6fe4c46, type: 3}
+  StatOverrides:
+  - _statConfig: {fileID: 11400000, guid: 476e3914f5cf02f458926f5dc561490c, type: 2}
+    _value: 300
+    _overrideType: 0
+  - _statConfig: {fileID: 11400000, guid: 834ebd6882d0a8748baceee99cf28451, type: 2}
+    _value: 99999
+    _overrideType: 0
+  - _statConfig: {fileID: 11400000, guid: f06013e54089df9469533e861a6174b8, type: 2}
+    _value: 10
+    _overrideType: 0
+  Abilities: []
+  _UnitConfig: {fileID: 11400000, guid: c0a90520a3083de4f8e4689f944dd99f, type: 2}

@@ -1,12 +1,14 @@
 using System;
 using Core.Initialization;
 using Core.Model.ModelSystems;
+using Core.Systems;
 using Core.Zenject.Source.Main;
 using DebugUtils;
 using Game;
 using Game.Entities;
 using Game.Entities.Board;
 using Game.Entities.Enemies;
+using Game.Entities.Spawners;
 using Game.Entities.Spawnpoints;
 using Game.Input;
 using Game.UI;
@@ -88,7 +90,7 @@ namespace Scenes.Play
 			BindInstance(gameEntity);
 			
 			BindInstance(new EntitySpawnSystem());
-			BindInstance(new PositionEntitiesSystem());
+			BindInstance(new WalkEntitySystem());
 			
 			BindInstance(new DebugGameplaySystem());
 			
@@ -101,7 +103,13 @@ namespace Scenes.Play
 
 			BindInstance(new PlayerSystem());
 			BindInstance(new BoardSystem());
-			BindInstance(new EnemiesSystem());	
+			BindInstance(new TileSystem());
+			BindInstance(new EnemiesSystem());
+			BindInstance(new MovingBehaviourSystem());
+			BindInstance(new SpawnerSystem());
+			BindInstance(new DestructibleSystem());
+
+//			BindInstance(new EntityMovingLogicSystem());
 			
 			BindInstance(GameplayViewConfig.MainCamera);
 			BindInstance(GameplayViewConfig.CinemachineCamera);
@@ -112,9 +120,28 @@ namespace Scenes.Play
 			InstantiatePrefabAndBind<PlayerInputManager>(GameplayViewConfig.PlayerInputManagerPrefab);
 			
 		}
+		
+		private const int MAX_TILE_NUMBER = 1000;
+		private const int MAX_CREATURES_NUMBER = 400;
 
 		public override void ResetComponentContainers(DataContainersController dataController)
 		{
+			
+			dataController.ResizeComponentsContainer<DestructableData>(MAX_CREATURES_NUMBER);
+			
+			dataController.ResizeComponentsContainer<HierarchyData>(MAX_TILE_NUMBER + MAX_CREATURES_NUMBER);
+			dataController.ResizeComponentsContainer<ColliderData>(MAX_TILE_NUMBER + MAX_CREATURES_NUMBER);
+			
+			//TILES
+			dataController.ResizeComponentsContainer<TileComponentData>(MAX_TILE_NUMBER);
+			
+			
+			//creatures
+			
+			dataController.ResizeComponentsContainer<UnitData>(MAX_CREATURES_NUMBER);
+			dataController.ResizeComponentsContainer<MovingBehaviourData>(MAX_CREATURES_NUMBER);
+			dataController.ResizeComponentsContainer<BoardData>(MAX_CREATURES_NUMBER);
+			dataController.ResizeComponentsContainer<WalkEntityData>(MAX_CREATURES_NUMBER);
 			
 		}
 	}

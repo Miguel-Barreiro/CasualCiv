@@ -8,6 +8,7 @@ using Core.VSEngine;
 using FixedPointy;
 using Game.Entities.Board;
 using Game.Entities.Enemies;
+using Game.Entities.Spawners;
 using Game.Input;
 using Global;
 using Scenes.Play;
@@ -18,14 +19,19 @@ namespace Game.Entities
 {
     public sealed class EntitySpawnSystem
     {
+        [Inject] private readonly BasicCompContainer<UnitData> EnemyContainer = null!;
         [Inject] private readonly BasicCompContainer<PlayerData> PlayerContainer = null!;
         [Inject] private readonly DebugConfig DebugConfig = null!;
 
+        [Inject] private readonly GameStatsContainer GameStatsContainer = null!;
         [Inject] private readonly StatsSystem StatsSystem = null!;
         [Inject] private readonly GameplayViewConfig GameplayViewConfig = null!;
 
         [Inject] private readonly ViewEntitiesContainer ViewEntitiesContainer = null!;
         [Inject] private readonly VSAbilitySystem VSAbilitySystem = null!;
+
+        [Inject] private readonly BoardSystem BoardSystem = null!;
+
 
 
 
@@ -34,7 +40,6 @@ namespace Game.Entities
         {
             EntityConfig playerEntityConfig = DebugConfig.TestPlayerEntityConfig;
             PlayerEntity newPlayer = new PlayerEntity(playerInputController, playerEntityConfig);
-
             
             foreach ( StatOverride statOverride in playerEntityConfig.StatOverrides)
                 StatsSystem.SetBaseValue(newPlayer.ID, statOverride.StatConfig, statOverride.Value);
@@ -52,20 +57,37 @@ namespace Game.Entities
             
             return newPlayer.ID;
         }
-
-        public EntId SpawnEnemy(EnemyConfig config)
+        
+        public EntId SpawnUnitSpawner(SpawnerConfig  config, Vector2Int position, bool isEnemy)
         {
-            EnemyEntity newEnemy = new EnemyEntity(config);
+            Vector3 worldPosition = BoardSystem.GetWorldPosition(position);
+            SpawnerEntity spawnerEntity = new SpawnerEntity(config, position, worldPosition, isEnemy);
             
-            foreach ( StatOverride statOverride in config.StatOverrides)
-                StatsSystem.SetBaseValue(newEnemy.ID, statOverride.StatConfig, statOverride.Value);
-
-            AddAbilities(newEnemy.ID, config.Abilities);
+            SetupGenericEntity(config, spawnerEntity.ID);
             
-            return newEnemy.ID;
+            return spawnerEntity.ID;
         }
 
-        private void AddAbilities(EntId parent, List<VSAbilityDataConfig> configAbilities)
+        public EntId SpawnUnit(UnitConfig config, Vector2Int position, bool isEnemy )
+        {
+            Vector3 worldPosition = BoardSystem.GetWorldPosition(position);
+            
+            UnitEntity newUnit = new UnitEntity(config, worldPosition, isEnemy);
+            
+            SetupGenericEntity(config, newUnit.ID);
+            
+            return newUnit.ID;
+        }
+
+        private void SetupGenericEntity(EntityConfig config, EntId newEntityId)
+        {
+            foreach ( StatOverride statOverride in config.StatOverrides)
+                StatsSystem.SetBaseValue(newEntityId, statOverride.StatConfig, statOverride.Value);
+
+            AddAbilities(newEntityId, config.Abilities);
+        }
+
+        private void AddAbilities(EntId parent, VSAbilityDataConfig[] configAbilities)
         {
             foreach (VSAbilityDataConfig vsAbilityDataConfig in configAbilities)
             {
@@ -95,19 +117,19 @@ namespace Game.Entities
             }
         }
 
-        public EntId SpawnEntity(EntityConfig config)
-        {
+        // public EntId SpawnEntity(EntityConfig config)
+        // {
+        //
+        //     // ref BoardEntityComponentData boardEntity = ref WorldContainer.GetComponent(entity.ID);
+        //     // boardEntity.ObjectType   = config.ObjectType;
+        //     // boardEntity.Tile         = config.Tile;
+        //     
+        //     return EntId.Invalid;
+        // }
 
-            // ref BoardEntityComponentData boardEntity = ref WorldContainer.GetComponent(entity.ID);
-            // boardEntity.ObjectType   = config.ObjectType;
-            // boardEntity.Tile         = config.Tile;
-            
-            return EntId.Invalid;
-        }
-
-        public EntId SpawnTile(CustomTile tile, Vector2Int Position, GameObject go)
+        public EntId SpawnTile(CustomTile tile, GameObject go)
         {
-            TileEntity tileEntity = new TileEntity();
+            TileEntity tileEntity = new TileEntity(tile);
             return tileEntity.ID;
         }
     }

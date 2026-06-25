@@ -8,7 +8,7 @@ namespace Game.Entities
 {
 	public sealed class AimPlayerEvent : EntityEvent<AimPlayerEvent>
 	{
-		public FixVec2 AimPosition = FixVec2.Zero;
+		public Vector2 AimPosition = Vector2.zero;
 
 		[Inject] private readonly BasicCompContainer<PlayerData> PlayerContainer = null!;
 		

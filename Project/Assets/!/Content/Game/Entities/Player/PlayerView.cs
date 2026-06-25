@@ -23,10 +23,11 @@ namespace Game.Entities
 				return;
 			
 			ref PlayerData playerData = ref PlayerContainer.GetComponent(EntityID);
-			Vector3 delta = playerData.AimPosition.ToVector3();
+			Vector3 delta = playerData.AimPosition;
 			float clampedValue = Mathf.Clamp(delta.magnitude * InputConfig.TargetMoveSpeed, InputConfig.TargetMaxDistance,  InputConfig.TargetMinDistance);
 			
 			AimTarget.transform.localPosition = delta.normalized * clampedValue;
+			
 		}
 	}
 }

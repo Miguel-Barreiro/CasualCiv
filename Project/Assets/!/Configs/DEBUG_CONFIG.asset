@@ -16,4 +16,59 @@ MonoBehaviour:
   name: Default Testing/Debuging Config
   testTile: {fileID: 11400000, guid: be101ddb89871b0448e229189dcfc556, type: 2}
   testEntityConfig: {fileID: 11400000, guid: cfb8ad3032ec9234da97c6e69008eda1, type: 2}
+  testEnemyConfig: {fileID: 11400000, guid: ea6a11908030a51479309a7ded6f281b, type: 2}
+  testSpeedyEnemyConfig: {fileID: 11400000, guid: c0a90520a3083de4f8e4689f944dd99f, type: 2}
   testPlayerEntityConfig: {fileID: 11400000, guid: 0124446de029b884892ec410bf60d927, type: 2}
+  _SpawnEntitiesDebug:
+    SpawnPositionsLeft:
+    - {x: -14, y: -5}
+    - {x: -14, y: -4}
+    - {x: -14, y: -3}
+    - {x: -14, y: -2}
+    - {x: -14, y: -1}
+    - {x: -14, y: 1}
+    - {x: -14, y: 0}
+    - {x: -14, y: 2}
+    - {x: -14, y: 3}
+    - {x: -14, y: 4}
+    - {x: -14, y: 5}
+    - {x: -14, y: 6}
+    - {x: -14, y: 7}
+    - {x: -10, y: 0}
+    - {x: -10, y: 1}
+    - {x: -10, y: 1}
+    - {x: -10, y: 2}
+    - {x: -10, y: 3}
+    - {x: -10, y: 4}
+    - {x: -10, y: 5}
+    - {x: -10, y: 6}
+    - {x: -10, y: -1}
+    - {x: -10, y: -2}
+    - {x: -10, y: -3}
+    - {x: -10, y: -4}
+    SpawnPositionsRight:
+    - {x: 12, y: -5}
+    - {x: 12, y: 5}
+    AttackPositionsLeft:
+    - {x: -3, y: -1}
+    - {x: -4, y: -1}
+    - {x: -4, y: 0}
+    - {x: -4, y: 1}
+    - {x: -3, y: 2}
+    - {x: -4, y: 8}
+    - {x: -3, y: 6}
+    - {x: -3, y: 5}
+    - {x: -3, y: 4}
+    - {x: -3, y: 3}
+    - {x: -3, y: -2}
+    - {x: -3, y: -3}
+    - {x: -3, y: -4}
+    - {x: -4, y: -5}
+    - {x: -4, y: -6}
+    AttackPositionsRight:
+    - {x: 2, y: -1}
+    - {x: 3, y: -1}
+    - {x: 4, y: 0}
+    - {x: 3, y: 1}
+    - {x: 3, y: 2}
+  _TestSpawnerConfig: {fileID: 11400000, guid: e18cd2d3239b5114198b3dbacd2d2482, type: 2}

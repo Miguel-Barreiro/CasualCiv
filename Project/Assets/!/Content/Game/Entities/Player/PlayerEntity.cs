@@ -13,8 +13,7 @@ using Zenject;
 namespace Game.Entities
 {
 	public sealed class PlayerEntity : Entity, 
-										IPlayer, 
-										IPositionComponent
+										IPlayer
 	{
 		public PlayerEntity(PlayerInputController playerInputController, EntityConfig config)
 		{
@@ -36,19 +35,20 @@ namespace Game.Entities
 	public struct PlayerData : IComponentData
 	{
 		public bool isSprinting;
-		public FixVec2 AimPosition;
+		public Vector2 AimPosition;
 		public PlayerInputController PlayerInputController;
+		public Vector2 MoveDirection;
 
 		public EntId ID { get; set; }
 
 
 		public void Init()
 		{
-			AimPosition = FixVec2.Zero;
+			AimPosition = Vector2.zero;
 		}
 	}
 
-	public interface IPlayer : IPositionComponent, Component<PlayerData> { }
+	public interface IPlayer : Component<PlayerData> { }
 
 
 
@@ -57,7 +57,6 @@ namespace Game.Entities
 	{
 		[Inject] private readonly ViewEntitiesContainer ViewEntitiesContainer = null!;
 		[Inject] private readonly BasicCompContainer<PlayerData> PlayerContainer = null!;
-		[Inject] private readonly BasicCompContainer<PositionComponentData> PositionComponentContainer = null!;
 		[Inject] private readonly MovementConfig MovementConfig = null!;
 		[Inject] private readonly StatsSystem StatsSystem = null!;
 		[Inject] private readonly GameStatsContainer GameStatsContainer = null!;
@@ -82,9 +81,9 @@ namespace Game.Entities
 				}
 
 				Rigidbody2D rigidbody2D = entityViewAtributes.Get<Rigidbody2D>();
-				FixVec2 moveDirection = PositionComponentContainer.GetComponent(entityId).MoveDirection;
+				Vector2 moveDirection = componentData.MoveDirection;
 
-				Fix magnitude = moveDirection.GetMagnitude();
+				Fix magnitude = moveDirection.magnitude;
 				if (magnitude < 0.1f)
 					rigidbody2D.mass = MovementConfig.PlayerRestMass;
 				else

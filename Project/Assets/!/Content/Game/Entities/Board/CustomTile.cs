@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Core.Events;
 using Core.Model;
 using Core.Model.ModelSystems;
-using Core.Zenject.Source.Internal;
+using DebugUtils;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Zenject;
@@ -16,11 +17,11 @@ namespace Game.Entities.Board
 
 		[SerializeField] private Sprite _Sprite;
 		[SerializeField] private BlockType _BlockType;
-		[SerializeField] private IBoardSystem.TileType _TileType = IBoardSystem.TileType.Ground;
+		[SerializeField] private ITileSystem.TileType _TileType = ITileSystem.TileType.Ground;
 
 		public Sprite Sprite => _Sprite;
 		public BlockType BlockType => _BlockType;
-		public IBoardSystem.TileType Type => _TileType;
+		public ITileSystem.TileType Type => _TileType;
 
 		
 		public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
@@ -39,22 +40,44 @@ namespace Game.Entities.Board
 			{
 				return true;
 			}
-#endif			
-
+#endif
+			
 			SetupTileEvent setupTileEvent = EventQueue.Trigger<SetupTileEvent>();
 			setupTileEvent.tilemap = tilemap;
 			setupTileEvent.go = go;
 			setupTileEvent.Position = new Vector2Int(position.x, position.y);
 			setupTileEvent.Tile = this;
 
+			Dictionary<Vector3Int, CustomTile> dictionary = _TileType == ITileSystem.TileType.Ground 
+																? TileEntitiesGround 
+																: TileEntitiesObjects;
+			// Debug.Log($"TILE {number++} { position}");
+			if(dictionary.ContainsKey(position))
+			{
+				Debug.Log($"Tile already exists at {position} <{_TileType}, {Sprite.name}> == <{dictionary[position]._TileType}, {dictionary[position]._Sprite.name}>");
+			}
+			else
+			{
+				dictionary.Add(position, this);
+			}
+			
 			return true;
 		}
 
+		public static int number = 0;
+		public static Dictionary<Vector3Int, CustomTile> TileEntitiesObjects = new Dictionary<Vector3Int, CustomTile>();
+		public static Dictionary<Vector3Int, CustomTile> TileEntitiesGround = new Dictionary<Vector3Int, CustomTile>();
 	}
 
-	public sealed class TileEntity : Entity
+	public sealed class TileEntity : Entity, ICollider
 	{
-		
+		public TileEntity(CustomTile tile)
+		{
+			ref TileComponentData componentData = ref GetComponent<TileComponentData>();
+			componentData.TileType = tile.Type;
+			ref ColliderData colliderData = ref GetComponent<ColliderData>();
+			colliderData.BlockType = tile.BlockType;
+		}
 	}
 
 	[StructLayout(LayoutKind.Auto)]
@@ -62,13 +85,11 @@ namespace Game.Entities.Board
 	{
 		public EntId ID { get; set; }
 
-		public BlockType BlockType;
-		public IBoardSystem.TileType TileType;
+		public ITileSystem.TileType TileType;
 
 		public void Init()
 		{
-			BlockType = BlockType.FullBlock;
-			TileType = IBoardSystem.TileType.Ground;
+			TileType = ITileSystem.TileType.Ground;
 		}
 	}
 
@@ -76,6 +97,7 @@ namespace Game.Entities.Board
 
 	public sealed class SetupTileEvent : Event<SetupTileEvent>
 	{
+		[Inject] private readonly TileSystem TileSystem = null!;
 		[Inject] private readonly BoardSystem BoardSystem = null!;
 		[Inject] private readonly EntitySpawnSystem EntitySpawnSystem = null!;
 		// [Inject] private readonly EntitiesContainer EntitiesContainer = null!;
@@ -88,22 +110,29 @@ namespace Game.Entities.Board
 		
 		public override void Execute()
 		{
-			EntId newTile = EntitySpawnSystem.SpawnTile(Tile, Position, go);
-			EntId previousEnt = BoardSystem.AddEntity(newTile, Position, Tile);
-
+			EntId newTile = EntitySpawnSystem.SpawnTile(Tile, go);
+			EntId previousEnt = TileSystem.AddTileEntity(newTile, Position, Tile);
+			
+			// Debug.Log($"Custom tile <{Position}> ");			
+			
 			if (previousEnt != EntId.Invalid)
 			{
-				Log($"Replacing tile ({previousEnt}) -> {Tile.name} ({newTile})");
+				// Log($"Replacing tile ({previousEnt}) -> {Tile.name} ({newTile})");
 				EntitiesContainer.DestroyEntity(previousEnt);
 			}
-			// Debug.Log($"new custom tile {Position} {Tile.Sprite.name} {go}");			
+			
+			if(Tile.BlockType == BlockType.EmptyBlock)
+				return;
+			
+			previousEnt = BoardSystem.AddCollider(newTile, Position);
+			
+			if (previousEnt != EntId.Invalid)
+			{
+				// Log($"Replacing collider ({previousEnt}) -> {Tile.name} ({newTile})");
+				EntitiesContainer.DestroyEntity(previousEnt);
+			}
 		}
 	}
 
 
-	public enum BlockType
-	{
-		FullBlock, 
-		EmptyBlock,
-	}
 }
