@@ -37,7 +37,7 @@ namespace Game.Entities
 		public bool isSprinting;
 		public Vector2 AimPosition;
 		public PlayerInputController PlayerInputController;
-		public Vector2 MoveDirection;
+		public Vector2 Position;
 
 		public EntId ID { get; set; }
 
@@ -45,6 +45,7 @@ namespace Game.Entities
 		public void Init()
 		{
 			AimPosition = Vector2.zero;
+			Position = Vector2.zero;
 		}
 	}
 
@@ -80,14 +81,14 @@ namespace Game.Entities
 					continue;
 				}
 
-				Rigidbody2D rigidbody2D = entityViewAtributes.Get<Rigidbody2D>();
-				Vector2 moveDirection = componentData.MoveDirection;
-
-				Fix magnitude = moveDirection.magnitude;
-				if (magnitude < 0.1f)
-					rigidbody2D.mass = MovementConfig.PlayerRestMass;
-				else
-					rigidbody2D.mass = MovementConfig.PlayerMovingMass;
+				// Rigidbody2D rigidbody2D = entityViewAtributes.Get<Rigidbody2D>();
+				// Vector2 moveDirection = componentData.MoveDirection;
+				//
+				// Fix magnitude = moveDirection.magnitude;
+				// if (magnitude < 0.1f)
+				// 	rigidbody2D.mass = MovementConfig.PlayerRestMass;
+				// else
+				// 	rigidbody2D.mass = MovementConfig.PlayerMovingMass;
 
 				if (componentData.isSprinting)
 					StatsSystem.SetBaseValue(entityId, GameStatsContainer.Speed, MovementConfig.SprintSpeed);

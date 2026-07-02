@@ -40,50 +40,22 @@ namespace Game.Input
 			movePlayerEvent.Direction = readValue;
 			// transform.Translate(new Vector3(readValue.x, readValue.y, 0));
 		}
-
-		public void OnAim(InputAction.CallbackContext aimValue)
+		
+		
+		public void OnMainAction(InputAction.CallbackContext attackValue)
 		{
-			AimPlayerEvent aimPlayerEvent = EntityEventQueue.Execute<AimPlayerEvent>(EntityID);
-			Vector2 readValue = aimValue.ReadValue<Vector2>();
-			aimPlayerEvent.AimPosition = readValue;
-		}
-
-		// public void OnSprint(InputAction.CallbackContext sprintValue)
-		// {
-		// 	bool pressingSprinting = sprintValue.ReadValueAsButton();
-		// 	if (PlayerContainer.GetComponent(EntityID).isSprinting)
-		// 	{
-		// 		if (!pressingSprinting)
-		// 		{
-		// 			SprintEndPlayerEvent sprintEndPlayerEvent = EntityEventQueue.Execute<SprintEndPlayerEvent>(EntityID);
-		// 		}
-		// 	} else
-		// 	{
-		// 		if (!pressingSprinting)
-		// 		{
-		// 			SprintStartPlayerEvent sprintStartPlayerEvent = EntityEventQueue.Execute<SprintStartPlayerEvent>(EntityID);
-		// 		}
-		// 	}
-		//
-		// }
-
-		public void OnJump(InputAction.CallbackContext jumpValue)
-		{
-			Debug.Log($"on jump pressed");
+			ref PlayerData playerData = ref PlayerContainer.GetComponent(EntityID);
 			
-			DeploySpawnerEvent newEvent = EntityEventQueue.Execute<DeploySpawnerEvent>(EntityID);
-			newEvent.SpawnPosition = BoardSystem.GetBoardPosition(transform.position);
+			DeploySpawnerEvent deploySpawnerEvent = EntityEventQueue.Execute<DeploySpawnerEvent>(EntityID);
+			deploySpawnerEvent.SpawnPosition = BoardSystem.GetBoardPosition(playerData.Position);
+			
 		}
 
-		public void OnDash(InputAction.CallbackContext dashValue)
+		public void OnCancel(InputAction.CallbackContext attackValue)
 		{
 			
 		}
-		
-		public void OnAttack(InputAction.CallbackContext attackValue)
-		{
-		}
-		
+
 
 	}
 }

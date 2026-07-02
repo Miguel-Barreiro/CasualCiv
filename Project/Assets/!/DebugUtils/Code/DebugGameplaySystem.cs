@@ -29,7 +29,7 @@ namespace DebugUtils
 		{
 			UnitConfig debugConfigTestUnitConfig = DebugConfig.TestUnitConfig;
 			
-			DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
+			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
 			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
 			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);
 			// DebugConfig.SpawnEntitiesDebug.SpawnPositionsLeft.ForEach(SpawnEnemy);

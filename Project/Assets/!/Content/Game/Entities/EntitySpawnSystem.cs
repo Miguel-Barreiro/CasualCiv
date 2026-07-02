@@ -65,6 +65,8 @@ namespace Game.Entities
             
             SetupGenericEntity(config, spawnerEntity.ID);
             
+            BoardSystem.AddCollider(spawnerEntity.ID, position);
+            
             return spawnerEntity.ID;
         }
 

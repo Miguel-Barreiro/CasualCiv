@@ -1,5 +1,6 @@
 using Core.Events;
 using Core.Model;
+using Game.Entities.Board;
 using Global;
 using UnityEngine;
 using Zenject;
@@ -35,12 +36,16 @@ namespace Game.Entities
 	{
 		[Inject] private readonly EntitySpawnSystem EntitySpawnSystem = null!;
 		[Inject] private readonly DebugConfig DebugConfig = null!;
+		[Inject] private readonly BoardSystem BoardSystem = null!;
+
 		
 		public Vector2Int SpawnPosition = Vector2Int.zero;
 		
 		public override void Execute()
 		{
-			EntitySpawnSystem.SpawnUnitSpawner(DebugConfig.TestSpawnerConfig, SpawnPosition, false);
+			BlockType blockType = BoardSystem.GetColliderAt(SpawnPosition, out _);
+			if(blockType == BlockType.EmptyBlock)
+				EntitySpawnSystem.SpawnUnitSpawner(DebugConfig.TestSpawnerConfig, SpawnPosition, false);
 		}
 	}
 	

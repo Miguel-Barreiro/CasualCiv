@@ -22,6 +22,9 @@ namespace Game.Entities.Board
 		public Vector3 GetWorldPosition(Vector2Int position);
 
 		public Vector2Int GetBoardPosition(Vector3 worldPosition);
+		
+		public Vector3 GetCellWorldPosition(Vector3 worldPosition);
+		
 	}
 	
 	public enum BlockType
@@ -30,7 +33,7 @@ namespace Game.Entities.Board
 		EmptyBlock,
 	}
 	
-	public sealed class BoardSystem : IInitSystem, IBoardSystem, 
+	public sealed class BoardSystem : IStartSystem, IBoardSystem, 
 									OnDestroyComponent<ColliderData>
 	{
 		[Inject] private readonly GameplayViewConfig GameplayViewConfig = null!;
@@ -39,7 +42,7 @@ namespace Game.Entities.Board
 		[Inject] private readonly BasicCompContainer<BoardData> BoardContainer = null!;
 		[Inject] private readonly BasicCompContainer<ColliderData> ColliderContainer = null!;
 		
-		public void Initialize()
+		public void StartSystem()
 		{
 			if(BoardContainer.Components[0].ID != EntId.Invalid)
 				return;
@@ -59,8 +62,6 @@ namespace Game.Entities.Board
 				}
 			}
 		}
-
-
 
 		public EntId AddCollider(EntId entity, Vector2Int position)
 		{
@@ -107,7 +108,8 @@ namespace Game.Entities.Board
 				throw new Exception("board view not found");
 			
 			BoardView boardView = entityViewAtributes.Get<BoardView>();
-			return boardView.GroundTilemap.CellToWorld((Vector3Int) position) + (Vector3) boardView.GroundTilemap.tileAnchor;
+			// return boardView.GroundTilemap.CellToWorld((Vector3Int) position) + boardView.GroundTilemap.tileAnchor;
+			return boardView.GroundTilemap.CellToWorld((Vector3Int) position);
 		}
 
 		public Vector2Int GetBoardPosition(Vector3 worldPosition)
@@ -120,6 +122,20 @@ namespace Game.Entities.Board
 			BoardView boardView = entityViewAtributes.Get<BoardView>();
 			Vector3Int cellPosition = boardView.GroundTilemap.WorldToCell(worldPosition);
 			return (Vector2Int) cellPosition;
+		}
+
+		public Vector3 GetCellWorldPosition(Vector3 worldPosition)
+		{
+			ref BoardData boardData = ref BoardContainer.Components[0];
+			
+			EntityViewAtributes entityViewAtributes = ViewEntitiesContainer.GetEntityViewAtributes(boardData.ID);
+			if(entityViewAtributes == null || entityViewAtributes.GameObject == null)
+				throw new Exception("board view not found");
+			
+			BoardView boardView = entityViewAtributes.Get<BoardView>();
+			Vector3Int cellPosition = boardView.GroundTilemap.WorldToCell(worldPosition);
+			
+			return boardView.GroundTilemap.CellToWorld(cellPosition);
 		}
 
 

@@ -47,26 +47,27 @@ namespace Game.Entities.Board
 			setupTileEvent.go = go;
 			setupTileEvent.Position = new Vector2Int(position.x, position.y);
 			setupTileEvent.Tile = this;
-
-			Dictionary<Vector3Int, CustomTile> dictionary = _TileType == ITileSystem.TileType.Ground 
-																? TileEntitiesGround 
-																: TileEntitiesObjects;
-			// Debug.Log($"TILE {number++} { position}");
-			if(dictionary.ContainsKey(position))
-			{
-				Debug.Log($"Tile already exists at {position} <{_TileType}, {Sprite.name}> == <{dictionary[position]._TileType}, {dictionary[position]._Sprite.name}>");
-			}
-			else
-			{
-				dictionary.Add(position, this);
-			}
+			
+			// Dictionary<Vector3Int, CustomTile> dictionary = _TileType == ITileSystem.TileType.Ground 
+			// 													? TileEntitiesGround 
+			// 													: TileEntitiesObjects;
+			// // Debug.Log($"TILE {number++} { position}");
+			// if(dictionary.ContainsKey(position))
+			// {
+			// 	Debug.Log($"Tile already exists at {position} <{_TileType}, {Sprite.name}> == <{dictionary[position]._TileType}, {dictionary[position]._Sprite.name}>");
+			// }
+			// else
+			// {
+			// 	dictionary.Add(position, this);
+			// }
 			
 			return true;
 		}
 
-		public static int number = 0;
-		public static Dictionary<Vector3Int, CustomTile> TileEntitiesObjects = new Dictionary<Vector3Int, CustomTile>();
-		public static Dictionary<Vector3Int, CustomTile> TileEntitiesGround = new Dictionary<Vector3Int, CustomTile>();
+
+		// public static int number = 0;
+		// public static Dictionary<Vector3Int, CustomTile> TileEntitiesObjects = new Dictionary<Vector3Int, CustomTile>();
+		// public static Dictionary<Vector3Int, CustomTile> TileEntitiesGround = new Dictionary<Vector3Int, CustomTile>();
 	}
 
 	public sealed class TileEntity : Entity, ICollider
